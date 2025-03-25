@@ -13,6 +13,7 @@ print("- Lua Hotkey 1 (alt+1) Go up the trial list")
 print("- Lua Hotkey 2 (alt+2) Go down the trial list")
 print("- Lua Hotkey 3 (alt+3) Play the current trial demo")
 print("- Lua Hotkey 4 (alt+4) Save the current trial to the saved/trials folder")
+print("- Lua Hotkey 5 (alt+5) Reset the current trial")
 print("")
 print("You can use the coin button to record your own trials. If you want to add your trial to the base list, you have to save it to the temp folder, and then copy it to data/{rom}/trials/base/{character}")
 
@@ -329,6 +330,8 @@ function before_frame()
     switch_trial(current_trial - 1)
   elseif hotkey2_pressed then
     switch_trial(current_trial + 1)
+  elseif hotkey5_pressed then
+    switch_trial(current_trial)
   end
 
   -- RECORDING
@@ -421,6 +424,7 @@ function on_gui()
   hotkey2_pressed = false
   hotkey3_pressed = false
   hotkey4_pressed = false
+  hotkey5_pressed = false
 end
 
 emu.registerstart(on_start)
@@ -440,8 +444,12 @@ end
 function hotkey4()
   hotkey4_pressed = true
 end
+function hotkey5()
+  hotkey5_pressed = true
+end
 
 input.registerhotkey(1, hotkey1)
 input.registerhotkey(2, hotkey2)
 input.registerhotkey(3, hotkey3)
 input.registerhotkey(4, hotkey4)
+input.registerhotkey(5, hotkey5)
