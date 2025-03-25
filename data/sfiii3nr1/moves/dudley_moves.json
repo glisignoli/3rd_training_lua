@@ -1,0 +1,380 @@
+[
+  {
+    "name" : "Light Punch",
+    "hits" : [ "36d4" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "3914" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch (Target)",
+    "hits" : [ "675c" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch (Target)",
+    "hits" : [ "7294" ],
+    "command" : "5MP",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Punch (Target)",
+    "hits" : [ "6be4" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "3b04" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch (Target)",
+    "hits" : [ "70bc", "70bc" ],
+    "command" : "5HP",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Punch (Target)",
+    "hits" : [ "6394" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "3eb4" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "3fd4" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick (Target)",
+    "hits" : [ "6064" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick (Target)",
+    "hits" : [ "656c" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick (Target)",
+    "hits" : [ "6cc4" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick (Target)",
+    "hits" : [ "61a4" ],
+    "command" : "5MK",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "4254" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick (Target)",
+    "hits" : [ "6eb4" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "44c4" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "4594" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch (Target)",
+    "hits" : [ "7414" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "46f4" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch (Target)",
+    "hits" : [ "7514" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "48fc" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "49ec" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "4bf4" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "4ed4" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "4fb4" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "50b4" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "51d4" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "5314" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Kick",
+    "hits" : [ "5454" ],
+    "command" : "njHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "5584" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "5664" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "5764" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "5884" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "59c4" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "5b04" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "0a50" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "5f34" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Personal Action",
+    "hits" : [ "0b10" ],
+    "command" : "HP+HK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Light Punch",
+    "hits" : [ "37b4" ],
+    "command" : "6LP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Medium Punch",
+    "hits" : [ "39d4" ],
+    "command" : "6MP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Heavy Punch",
+    "hits" : [ "3cdc" ],
+    "command" : "6HP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Medium Kick",
+    "hits" : [ "4124" ],
+    "command" : "6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Heavy Kick",
+    "hits" : [ "4394" ],
+    "command" : "6HK",
+    "type" : 1
+  },
+  {
+    "name" : "Machine Gun Blow (Light)",
+    "hits" : [ "c410" ],
+    "command" : "41236LP",
+    "type" : 2
+  },
+  {
+    "name" : "Machine Gun Blow (Medium)",
+    "hits" : [ "c660", "c660", "c660", "c660" ],
+    "command" : "41236MP",
+    "type" : 2
+  },
+   {
+    "name" : "Machine Gun Blow (Heavy)",
+    "hits" : [ "c988", "c988", "c988", "c988", "c988", "c988" ],
+    "command" : "41236HP",
+    "type" : 2
+  },
+   {
+    "name" : "Machine Gun Blow (EX)",
+    "hits" : [ "ccc8", "ccc8", "ccc8", "ccc8", "ccc8", "ccc8", "ccc8" ],
+    "command" : "41236PP",
+    "type" : 2
+  },
+  {
+    "name" : "Ducking Straight",
+    "hits" : [ "0080" ],
+    "command" : "41236K, P",
+    "type" : 2
+  },
+  {
+    "name" : "Ducking Upper",
+    "hits" : [ "0288", "0288" ],
+    "command" : "41236K, K",
+    "type" : 2
+  },
+  {
+    "name" : "Cross Counter",
+    "hits" : [ "f910" ],
+    "command" : "63214P",
+    "type" : 2
+  },
+  {
+    "name" : "Cross Counter (EX)",
+    "hits" : [ "fd50", "fd50" ],
+    "command" : "63214PP",
+    "type" : 2
+  },
+  {
+    "name" : "Short Swing Blow (Light)",
+    "hits" : [ "d170" ],
+    "command" : "63214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Short Swing Blow (Medium)",
+    "hits" : [ "d300" ],
+    "command" : "63214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Short Swing Blow (Heavy)",
+    "hits" : [ "d490" ],
+    "command" : "63214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Short Swing Blow (EX)",
+    "hits" : [ "d620", "d620", "d620" ],
+    "command" : "63214KK",
+    "type" : 2
+  },
+   {
+    "name" : "Jet Uppercut (Light)",
+    "hits" : [ "a9a0" ],
+    "command" : "623LP",
+    "type" : 2
+  },
+  {
+    "name" : "Jet Uppercut (Medium)",
+    "hits" : [ "ace0" ],
+    "command" : "623MP",
+    "type" : 2
+  },
+  {
+    "name" : "Jet Uppercut (Heavy)",
+    "hits" : [ "b020" ],
+    "command" : "623HP",
+    "type" : 2
+  },
+  {
+    "name" : "Jet Uppercut (EX)",
+    "hits" : [ "b4b0", "b4b0" ],
+    "command" : "623PP",
+    "type" : 2
+  },
+  {
+    "name" : "Rocket Uppercut",
+    "hits" : [ "d910", "d910", "d910", "d910", "d910", "d910", "d910", "d910", "d910", "d910", "d910" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Rolling Thunder",
+    "hits" : [ "bc08", "bc08", "bc08", "bc08", "bc08", "bc08", "bc08", "bc08" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Corkscrew Blow",
+    "hits" : [ "b958", "b958", "b958", "b958", "b958" ],
+    "command" : "236236P",
+    "type" : 3
+  }
+]

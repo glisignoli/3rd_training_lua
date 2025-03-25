@@ -1,155 +1,296 @@
-/*
-  HUGO
-*/
 [
-  /*
-    NORMALS
-  */
   {
     "name" : "Light Punch",
     "hits" : [ "3fe0" ],
     "command" : "5LP",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Medium Punch",
     "hits" : [ "40b0" ],
     "command" : "5MP",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Heavy Punch",
     "hits" : [ "4200" ],
     "command" : "5HP",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Light Kick",
     "hits" : [ "4820" ],
     "command" : "5LK",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Medium Kick",
     "hits" : [ "48d0", "48d0" ],
     "command" : "5MK",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Heavy Kick",
     "hits" : [ "4c10" ],
     "command" : "5HK",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Crouching Light Punch",
     "hits" : [ "4e00" ],
     "command" : "2LP",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Crouching Medium Punch",
     "hits" : [ "4ec0" ],
     "command" : "2MP",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Crouching Heavy Punch",
     "hits" : [ "4f60" ],
     "command" : "2HP",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Crouching Light Kick",
     "hits" : [ "5060" ],
     "command" : "2LK",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Crouching Medium Kick",
     "hits" : [ "5110" ],
     "command" : "2MK",
-    "type" : 0,
+    "type" : 0
   },
   {
     "name" : "Crouching Heavy Kick",
     "hits" : [ "51d0" ],
     "command" : "2HK",
-    "type" : 0,
+    "type" : 0
   },
   {
-    "name" : "Air Heavy Kick",
-    "hits" : [ "5790" ],
-    "command" : "5HK",
-    "type" : 0,
+    "name" : "Jumping Light Punch",
+    "hits" : [ "52a0" ],
+    "command" : "jLP",
+    "type" : 0
   },
-  /*
-    COMMAND NORMALS
-  */
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "5370" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "5440" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "55f0" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "56c0" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "bc48" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "5790" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "1cd4" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "5da8" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
   {
     "name" : "Forward Heavy Punch",
     "hits" : [ "4420" ],
     "command" : "6HP",
-    "type" : 1,
+    "type" : 1
   },
   {
     "name" : "Body Slam",
     "hits" : [ "5540" ],
     "command" : "j2HP",
-    "type" : 1,
+    "type" : 1
   },
-  /*
-    SPECIALS
-  */
   {
-    "name" : "Light Clap",
+    "name" : "Giant Palm Bomber (Light)",
     "hits" : [ "efcc" ],
     "command" : "214LP",
-    "type" : 2,
+    "type" : 2
   },
   {
-    "name" : "Heavy Clap",
+    "name" : "Giant Palm Bomber (Medium)",
+    "hits" : [ "f1bc" ],
+    "command" : "214MP",
+    "type" : 2
+  },
+  {
+    "name" : "Giant Palm Bomber (Heavy)",
     "hits" : [ "f3ac" ],
     "command" : "214HP",
-    "type" : 2,
+    "type" : 2
   },
   {
-    "name" : "EX Clap",
+    "name" : "Giant Palm Bomber (EX)",
     "hits" : [ "f59c", "f59c", "f59c" ],
     "command" : "214PP",
-    "type" : 2,
+    "type" : 2
   },
   {
-    "name" : "EX Lariat",
+    "name" : "Monster Lariat (Light)",
+    "hits" : [ "f7a4" ],
+    "command" : "236LK",
+    "type" : 2
+  },
+  {
+    "name" : "Monster Lariat (Medium)",
+    "hits" : [ "fa54" ],
+    "command" : "236MK",
+    "type" : 2
+  },
+  {
+    "name" : "Monster Lariat (Heavy)",
+    "hits" : [ "fd1c" ],
+    "command" : "236HK",
+    "type" : 2
+  },
+  {
+    "name" : "Monster Lariat (EX)",
     "hits" : [ "0044" ],
     "command" : "236KK",
-    "type" : 2,
+    "type" : 2
   },
   {
-    "name" : "Light Ultra Throw",
+    "name" : "Ultra Throw (Light)",
     "hits" : [ "06b4" ],
-    "command" : "63214LP",
-    "type" : 2,
+    "command" : "63214LK",
+    "type" : 2
   },
   {
-    "name" : "Light Back Breaker",
+    "name" : "Ultra Throw (Medium)",
+    "hits" : [ "082c" ],
+    "command" : "63214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Ultra Throw (Heavy)",
+    "hits" : [ "08cc" ],
+    "command" : "63214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Shootdown Backbreaker (Light)",
     "hits" : [ "096c" ],
-    "command" : "63214LP",
-    "type" : 2,
+    "command" : "623LK",
+    "type" : 2
   },
   {
-    "name" : "Medium Back Breaker",
+    "name" : "Shootdown Backbreaker (Medium)",
     "hits" : [ "0ab4" ],
-    "command" : "63214MP",
-    "type" : 2,
+    "command" : "623MK",
+    "type" : 2
   },
-  /*
-    SUPER ARTS
-  */
+  {
+    "name" : "Shootdown Backbreaker (Heavy)",
+    "hits" : [ "0c14" ],
+    "command" : "623HK",
+    "type" : 2
+  },
+  {
+    "name" : "Meat Squasher (Light)",
+    "hits" : [ "1d64", "0900"  ],
+    "command" : "360LK",
+    "type" : 2
+  },
+  {
+    "name" : "Meat Squasher (Medium)",
+    "hits" : [ "1f24", "0a00"  ],
+    "command" : "360MK",
+    "type" : 2
+  },
+  {
+    "name" : "Meat Squasher (Heavy)",
+    "hits" : [ "2184", "0b00"  ],
+    "command" : "360HK",
+    "type" : 2
+  },
+  {
+    "name" : "Moonsault Press (Light)",
+    "hits" : [ "0444" ],
+    "command" : "360LP",
+    "type" : 2
+  },
+  {
+    "name" : "Moonsault Press (Medium)",
+    "hits" : [ "05a4" ],
+    "command" : "360MP",
+    "type" : 2
+  },
+  {
+    "name" : "Moonsault Press (Heavy)",
+    "hits" : [ "062c" ],
+    "command" : "360HP",
+    "type" : 2
+  },
+  {
+    "name" : "Gigas Breaker",
+    "hits" : [ "0d8c" ],
+    "command" : "720P",
+    "type" : 3
+  },
+  {
+    "name" : "Megaton Press (Light)",
+    "hits" : [ "0f1c" ],
+    "command" : "236236LK",
+    "type" : 3
+  },
+  {
+    "name" : "Megaton Press (Medium)",
+    "hits" : [ "1034" ],
+    "command" : "236236MK",
+    "type" : 3
+  },
+  {
+    "name" : "Megaton Press (Heavy)",
+    "hits" : [ "1164" ],
+    "command" : "236236HK",
+    "type" : 3
+  },
+  {
+    "name" : "Megaton Press (end)",
+    "hits" : [ "ffe0" ],
+    "command" : "watch demo!",
+    "type" : 3
+  },
   {
     "name" : "Hammer Mountain",
     "hits" : [ "1294", "15cc", "15cc", "15cc", "15cc" ],
     "command" : "236236P",
-    "type" : 3,
-  },
+    "type" : 3
+  }
 ]

@@ -1,0 +1,320 @@
+[
+  {
+    "name" : "Close Light Punch",
+    "hits" : [ "d09c" ],
+    "command" : "clLP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Punch",
+    "hits" : [ "d18c" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "d304" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "d72c" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "dd1c" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "df1c" ],
+    "command" : "5MK",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Kick",
+    "hits" : [ "ddfc" ],
+    "command" : "clMK",
+    "type" : 0
+  },  
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "e01c" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "e3f4" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "e4c4" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "e684" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "e7e4" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "e8b4" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "ea14" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "ec04" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "eca4" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "eda4" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "eea4" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "ef94" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "f194" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "f234" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "f334" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "eea4" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "f074" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "f074" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "9074" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Back/Forward Throw",
+    "hits" : [ "fc3c" ],
+    "command" : "4/6LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "f9ac" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Back Medium Punch",
+    "hits" : [ "d524" ],
+    "command" : "4MP",
+    "type" : 1
+  },
+  {
+    "name" : "Back Heavy Punch",
+    "hits" : [ "da24" ],
+    "command" : "4HP",
+    "type" : 1
+  },
+  {
+    "name" : "Back Heavy Kick",
+    "hits" : [ "e1f4" ],
+    "command" : "4HK",
+    "type" : 1
+  },
+  {
+    "name" : "Dashing Head Attack (Light)",
+    "hits" : [ "44d4" ],
+    "command" : "[4]6LP",
+    "type" : 2
+  },
+  {
+    "name" : "Dashing Head Attack (Medium)",
+    "hits" : [ "47b4" ],
+    "command" : "[4]6MP",
+    "type" : 2
+  },
+  {
+    "name" : "Dashing Head Attack (Heavy)",
+    "hits" : [ "4ac4" ],
+    "command" : "[4]6HP",
+    "type" : 2
+  },
+  {
+    "name" : "Dashing Head Attack (EX)",
+    "hits" : [ "4e04" ],
+    "command" : "[4]6PP",
+    "type" : 2
+  },
+  {
+    "name" : "Dashing Head Attack (Light, Overhead)",
+    "hits" : [ "5cdc" ],
+    "command" : "[4]6LP(hold LP)",
+    "type" : 2
+  },
+  {
+    "name" : "Dashing Head Attack (Medium, Overhead)",
+    "hits" : [ "5f44" ],
+    "command" : "[4]6MP(hold MP)",
+    "type" : 1
+  },
+  {
+    "name" : "Dashing Head Attack (Heavy, Overhead)",
+    "hits" : [ "61ac" ],
+    "command" : "[4]6HP(hold HP)",
+    "type" : 1
+  },
+  {
+    "name" : "Dashing Leg Attack (Light)",
+    "hits" : [ "518c" ],
+    "command" : "[4]6LK",
+    "type" : 1
+  },
+  {
+    "name" : "Dashing Leg Attack (Medium)",
+    "hits" : [ "5454" ],
+    "command" : "[4]6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Dashing Leg Attack (Heavy)",
+    "hits" : [ "5734" ],
+    "command" : "[4]6HK",
+    "type" : 2
+  },
+  {
+    "name" : "Dashing Leg Attack (EX)",
+    "hits" : [ "5a2c", "5a2c" ],
+    "command" : "[4]6KK",
+    "type" : 2
+  },
+  {
+    "name" : "High Speed Barrage (Light)",
+    "hits" : [ "6414", "6414", "6414" ],
+    "command" : "214LP",
+    "type" : 2
+  },
+  {
+    "name" : "High Speed Barrage (Medium)",
+    "hits" : [ "685c", "685c", "685c" ],
+    "command" : "214MP",
+    "type" : 2
+  },
+  {
+    "name" : "High Speed Barrage (Heavy)",
+    "hits" : [ "6c8c", "6c8c", "6c8c" ],
+    "command" : "214HP",
+    "type" : 2
+  },
+  {
+    "name" : "High Speed Barrage (EX)",
+    "hits" : [ "70a4", "70a4", "70a4", "70a4", "70a4", "70a4", "70a4" ],
+    "command" : "214PP",
+    "type" : 2
+  },
+  {
+    "name" : "Capture and Deadly Blow (Light)",
+    "hits" : [ "7714" ],
+    "command" : "63214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Capture and Deadly Blow (Medium)",
+    "hits" : [ "794c" ],
+    "command" : "63214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Capture and Deadly Blow (Heavy)",
+    "hits" : [ "7b84" ],
+    "command" : "63214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Critical Combo Attack",
+    "hits" : [ "7dbc", "81a4", "81a4", "8304", "7dbc" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Deadly Double Combination",
+    "hits" : [ "8464", "8464" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Total Destruction, Close Throw",
+    "hits" : [ "8c1c" ],
+    "command" : "236236P, then 236P",
+    "type" : 3
+  },
+  {
+    "name" : "Total Destruction, Far Throw",
+    "hits" : [ "8df4" ],
+    "command" : "236236P, then 236K",
+    "type" : 3
+  }
+]

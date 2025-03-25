@@ -1,37 +1,31 @@
 [
   {
-    "name" : "Close Light Punch",
-    "hits" : [ "a1e0" ],
-    "command" : "clLP",
-    "type" : 0
-  },
-  {
     "name" : "Light Punch",
-    "hits" : [ "a270" ],
+    "hits" : [ "be7c" ],
     "command" : "5LP",
     "type" : 0
   },
   {
     "name" : "Medium Punch",
-    "hits" : [ "a3d0" ],
+    "hits" : [ "bfcc" ],
     "command" : "5MP",
     "type" : 0
   },
   {
     "name" : "Close Medium Punch",
-    "hits" : [ "a320" ],
+    "hits" : [ "bf1c" ],
     "command" : "clMP",
     "type" : 0
   },
   {
     "name" : "Heavy Punch",
-    "hits" : [ "a560" ],
+    "hits" : [ "c14c" ],
     "command" : "5HP",
     "type" : 0
   },
   {
     "name" : "Close Heavy Punch",
-    "hits" : [ "a470" ],
+    "hits" : [ "c06c" ],
     "command" : "clHP",
     "type" : 0
   },
@@ -43,266 +37,272 @@
   }, 
   {
     "name" : "Light Kick",
-    "hits" : [ "a630" ],
+    "hits" : [ "c3cc" ],
     "command" : "5LK",
     "type" : 0
   }, 
   {
     "name" : "Medium Kick",
-    "hits" : [ "a6b0" ],
+    "hits" : [ "c44c" ],
     "command" : "5MK",
     "type" : 0
   }, 
   {
     "name" : "Heavy Kick",
-    "hits" : [ "aa70" ],
+    "hits" : [ "c5dc" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Close Heavy Kick",
+    "hits" : [ "c50c" ],
+    "command" : "clHK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Close Heavy Kick (Target)",
+    "hits" : [ "dad4" ],
     "command" : "5HK",
     "type" : 0
   }, 
   {
     "name" : "Crouching Light Punch",
-    "hits" : [ "ae08" ],
+    "hits" : [ "c7ec" ],
     "command" : "2LP",
     "type" : 0
   },
   {
     "name" : "Crouching Medium Punch",
-    "hits" : [ "aeb8" ],
+    "hits" : [ "c89c" ],
     "command" : "2MP",
     "type" : 0
   },
   {
     "name" : "Crouching Heavy Punch",
-    "hits" : [ "af68" ],
+    "hits" : [ "c94c" ],
     "command" : "2HP",
     "type" : 0
   },
   {
     "name" : "Crouching Light Kick",
-    "hits" : [ "b048" ],
+    "hits" : [ "ca3c" ],
     "command" : "2LK",
     "type" : 0
   },
   {
     "name" : "Crouching Medium Kick",
-    "hits" : [ "b0e8" ],
+    "hits" : [ "cadc" ],
     "command" : "2MK",
     "type" : 0
   },
   {
     "name" : "Crouching Heavy Kick",
-    "hits" : [ "b1b8" ],
+    "hits" : [ "cbac" ],
     "command" : "2HK",
     "type" : 0
   },
   {
     "name" : "nj Light Punch",
-    "hits" : [ "b2a8" ],
+    "hits" : [ "cc9c" ],
     "command" : "njLP",
     "type" : 0
   },
   {
     "name" : "nj Medium Punch",
-    "hits" : [ "b388" ],
+    "hits" : [ "cd7c" ],
     "command" : "njMP",
     "type" : 0
   },
   {
     "name" : "nj Heavy Punch",
-    "hits" : [ "b468" ],
+    "hits" : [ "ce5c" ],
     "command" : "njHP",
     "type" : 0
   },
   {
     "name" : "nj Light Kick",
-    "hits" : [ "b528" ],
+    "hits" : [ "cf1c" ],
     "command" : "njLK",
     "type" : 0
   },
   {
     "name" : "nj Medium Kick",
-    "hits" : [ "b638" ],
+    "hits" : [ "d02c" ],
     "command" : "njMK",
     "type" : 0
   },
   {
     "name" : "nj Heavy Kick",
-    "hits" : [ "b708" ],
+    "hits" : [ "d0fc" ],
     "command" : "njHK",
     "type" : 0
   },
   {
     "name" : "Jumping Light Punch",
-    "hits" : [ "b7e8" ],
+    "hits" : [ "d1dc" ],
     "command" : "jLP",
     "type" : 0
   },
   {
     "name" : "Jumping Medium Punch",
-    "hits" : [ "b8c8" ],
+    "hits" : [ "d2bc" ],
     "command" : "jMP",
     "type" : 0
   },
   {
     "name" : "Jumping Heavy Punch",
-    "hits" : [ "b9a8" ],
+    "hits" : [ "d39c" ],
     "command" : "jHP",
     "type" : 0
   },
   {
     "name" : "Jumping Light Kick",
-    "hits" : [ "ba88" ],
+    "hits" : [ "d47c" ],
     "command" : "jLK",
     "type" : 0
   },
   {
     "name" : "Jumping Medium Kick",
-    "hits" : [ "bb68" ],
+    "hits" : [ "d55c" ],
     "command" : "jMK",
     "type" : 0
   },
   {
     "name" : "Jumping Heavy Kick",
-    "hits" : [ "bc48" ],
+    "hits" : [ "d63c" ],
     "command" : "jHK",
     "type" : 0
   },
   {
     "name" : "Universal Overhead",
-    "hits" : [ "23ec" ],
+    "hits" : [ "3e50" ],
     "command" : "MP+MK",
     "type" : 0
   },
   {
     "name" : "Throw",
-    "hits" : [ "bff8" ],
+    "hits" : [ "d9ec" ],
     "command" : "LP+LK",
     "type" : 0
   },
   {
     "name" : "Personal Action",
-    "hits" : [ "24cc" ],
+    "hits" : [ "2f3c", "31ec" ],
     "command" : "HP+HK",
     "type" : 0
   },
   {
     "name" : "Forward Heavy Kick",
-    "hits" : [ "abe8" ],
+    "hits" : [ "c6ec" ],
     "command" : "6HK",
     "type" : 1
-  },
-  {
-    "name" : "Forward Medium Kick",
-    "hits" : [ "a870" ],
-    "command" : "6MK",
+  }, 
+   {
+    "name" : "Forward Heavy Punch",
+    "hits" : [ "c25c", "c25c" ],
+    "command" : "6HP",
     "type" : 1
   },
   {
-    "name" : "Back Medium Kick",
-    "hits" : [ "a980", "a980" ],
-    "command" : "4MK",
-    "type" : 1
-  },
-  {
-    "name" : "Hadouken",
-    "hits" : [ "04e4" ],
-    "command" : "236P",
+    "name" : "Ryuubi Kyaku",
+    "hits" : [ "28c0" ],
+    "command" : "236K",
     "type" : 2
   },
   {
-    "name" : "Hadouken (EX)",
-    "hits" : [ "04e4, 04e4" ],
-    "command" : "236PP",
+    "name" : "Ryuubi Kyaku (EX)",
+    "hits" : [ "2a10", "2a10" ],
+    "command" : "236KK",
     "type" : 2
   },
   {
     "name" : "Shoryuken (Light)",
-    "hits" : [ "0884" ],
+    "hits" : [ "3f30" ],
     "command" : "623LP",
     "type" : 2
   },
   {
     "name" : "Shoryuken (Medium)",
-    "hits" : [ "0984", "0984" ],
+    "hits" : [ "4000" ],
     "command" : "623MP",
     "type" : 2
   },
   {
     "name" : "Shoryuken (Heavy)",
-    "hits" : [ "0a24", "0a24", "0a24" ],
+    "hits" : [ "40e0" ],
     "command" : "623HP",
     "type" : 2
   },
   {
     "name" : "Shoryuken (EX)",
-    "hits" : [ "0b64", "0b64", "0b64", "0b64" ],
+    "hits" : [ "41e0", "41e0" ],
     "command" : "623PP",
     "type" : 2
   },
   {
-    "name" : "Tatsumaki (Light)",
-    "hits" : [ "0c44", "0c44" ],
+    "name" : "Tornado Kick (Light)",
+    "hits" : [ "2310", "2310" ],
     "command" : "214LK",
     "type" : 2
   },
   {
-    "name" : "Tatsumaki (Medium)",
-    "hits" : [ "0d54", "0d54", "0d54", "0d54" ],
+    "name" : "Tornado Kick (Medium)",
+    "hits" : [ "2470", "2470", "2470" ],
     "command" : "214MK",
     "type" : 2
   },
   {
-    "name" : "Tatsumaki (Heavy)",
-    "hits" : [ "0ee4", "0ee4", "0ee4", "0ee4", "0ee4" ],
+    "name" : "Tornado Kick (Heavy)",
+    "hits" : [ "25b0", "25b0", "25b0", "25b0" ],
     "command" : "214HK",
     "type" : 2
   },
   {
-    "name" : "Tatsumaki (EX)",
-    "hits" : [ "1074", "1074", "1074", "1074", "1074", "1074" ],
+    "name" : "Tornado Kick (EX)",
+    "hits" : [ "2740", "2740", "2740", "2740" ],
     "command" : "214KK",
     "type" : 2
   },
   {
-    "name" : "Air Tatsumaki (Light)",
-    "hits" : [ "1fd4" ],
-    "command" : "j214LK",
+    "name" : "Tackle (Light)",
+    "hits" : [ "1ef0" ],
+    "command" : "41236LP(Hold)",
     "type" : 2
   },
   {
-    "name" : "Air Tatsumaki (Medium)",
-    "hits" : [ "2114" ],
-    "command" : "j214MK",
+    "name" : "Tackle (Medium)",
+    "hits" : [ "2060" ],
+    "command" : "41236MP(Hold)",
     "type" : 2
   },
   {
-    "name" : "Air Tatsumaki (Heavy)",
-    "hits" : [ "21f4" ],
-    "command" : "j214HK",
+    "name" : "Tackle (Heavy)",
+    "hits" : [ "2130" ],
+    "command" : "41236HP(Hold)",
     "type" : 2
   },
   {
-    "name" : "Air Tatsumaki (EX)",
-    "hits" : [ "22d4" ],
-    "command" : "j214KK",
+    "name" : "Tackle (EX)",
+    "hits" : [ "2200" ],
+    "command" : "41236PP(Hold)",
     "type" : 2
   },
   {
-    "name" : "Shoryureppa",
-    "hits" : [ "1214", "1214", "1214", "1214", "1214", "1214", "1214", "1214", "1214", "1214", "1214", "1214" ],
+    "name" : "Hadou Burst",
+    "hits" : [ "2b60" ],
     "command" : "236236P",
     "type" : 3
   },
   {
-    "name" : "Shinryuken",
-    "hits" : [ "15b4", "15b4", "15b4", "15b4", "15b4", "15b4", "15b4", "15b4", "15b4" ],
-    "command" : "236236K",
+    "name" : "Shoryuu Cannon",
+    "hits" : [ "34e0", "34e0", "34e0", "34e0", "34e0" ],
+    "command" : "236236P",
     "type" : 3
   },
   {
-    "name" : "Shipuu Jinrai Kyaku",
-    "hits" : [ "1834", "1834", "1834", "1834", "1834", "1d24", "1d24", "1d24", "1d24" ],
-    "command" : "236236K",
+    "name" : "Hyper Tornado",
+    "hits" : [ "2dc8", "2dc8", "2dc8", "2dc8", "2dc8", "2dc8", "2dc8", "2dc8", "2dc8", "2dc8", "2dc8", "2dc8" ],
+    "command" : "236236P",
     "type" : 3
   }
 ]

@@ -1,0 +1,278 @@
+[
+  {
+    "name" : "Close Light Punch",
+    "hits" : [ "a394" ],
+    "command" : "clLP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Punch",
+    "hits" : [ "a444" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "a534" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "a7dc" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "ae64" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "b094" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Close Medium Kick",
+    "hits" : [ "af7c" ],
+    "command" : "clMK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "b224" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "b4bc" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "b634" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "b714", "b714" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "b7fc" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "b99c" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "babc" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "bc0c" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "bd6c" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "be7c" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "bf94" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "c0e4" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "c1c4" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "72d4" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "c9ec" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Medium Punch",
+    "hits" : [ "a694" ],
+    "command" : "6MP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Heavy Punch",
+    "hits" : [ "a9fc" ],
+    "command" : "6HP",
+    "type" : 1
+  },
+  {
+    "name" : "Back Heavy Punch",
+    "hits" : [ "ad04" ],
+    "command" : "4HP",
+    "type" : 1
+  },
+  {
+    "name" : "Jumping Down Heavy Punch",
+    "hits" : [ "c324" ],
+    "command" : "j2HP",
+    "type" : 1
+  },
+  {
+    "name" : "Flash Chop (Light)",
+    "hits" : [ "5944" ],
+    "command" : "236LP",
+    "type" : 2
+  },
+  {
+    "name" : "Flash Chop (Medium)",
+    "hits" : [ "5aec" ],
+    "command" : "236MP",
+    "type" : 2
+  },
+  {
+    "name" : "Flash Chop (Heavy)",
+    "hits" : [ "5cac" ],
+    "command" : "236HP",
+    "type" : 2
+  },
+  {
+    "name" : "Flash Chop (EX)",
+    "hits" : [ "5e54" ],
+    "command" : "236PP",
+    "type" : 2
+  },
+  {
+    "name" : "Power Bomb (Light)",
+    "hits" : [ "6014" ],
+    "command" : "63214LP",
+    "type" : 2
+  },
+  {
+    "name" : "Power Bomb (Medium)",
+    "hits" : [ "6144" ],
+    "command" : "63214MP",
+    "type" : 2
+  },
+  {
+    "name" : "Power Bomb (Heavy)",
+    "hits" : [ "6274" ],
+    "command" : "63214HP",
+    "type" : 2
+  },
+  {
+    "name" : "Air Knee Smash (Light)",
+    "hits" : [ "531c" ],
+    "command" : "623LK",
+    "type" : 2
+  },
+  {
+    "name" : "Air Knee Smash (Medium)",
+    "hits" : [ "54ac" ],
+    "command" : "623MK",
+    "type" : 2
+  },
+  {
+    "name" : "Air Knee Smash (Heavy)",
+    "hits" : [ "5624" ],
+    "command" : "623HK",
+    "type" : 2
+  },
+  {
+    "name" : "Air Knee Smash (EX)",
+    "hits" : [ "579c" ],
+    "command" : "623KK",
+    "type" : 2
+  },
+  {
+    "name" : "Air Stampede",
+    "hits" : [ "70e4" ],
+    "command" : "[2]8K",
+    "type" : 2
+  },
+  {
+    "name" : "Slash Elbow (Light))",
+    "hits" : [ "8294" ],
+    "command" : "[4]6LK",
+    "type" : 2
+  },
+  {
+    "name" : "Slash Elbow (Medium)",
+    "hits" : [ "849c" ],
+    "command" : "[4]6MK",
+    "type" : 2
+  },
+  {
+    "name" : "Slash Elbow (Heavy)",
+    "hits" : [ "871c" ],
+    "command" : "[4]6HK",
+    "type" : 2
+  },
+  {
+    "name" : "Slash Elbow (EX)",
+    "hits" : [ "899c" ],
+    "command" : "[4]6KK",
+    "type" : 2
+  },
+  {
+    "name" : "Spiral D.D.T.",
+    "hits" : [ "8bd4" ],
+    "command" : "63214K",
+    "type" : 2
+  },
+  {
+    "name" : "Hyper Bomb",
+    "hits" : [ "63a4" ],
+    "command" : "360P",
+    "type" : 3
+  },
+  {
+    "name" : "Boomerang Raid",
+    "hits" : [ "64ec", "64ec", "64ec", "64ec", "688c" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Stun Gun Headbutt",
+    "hits" : [ "69d4" ],
+    "command" : "236236P",
+    "type" : 3
+  }
+]

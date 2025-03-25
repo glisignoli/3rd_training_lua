@@ -1,0 +1,512 @@
+[
+  {
+    "name" : "Light Punch",
+    "hits" : [ "f5b0" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Light Punch",
+    "hits" : [ "f468" ],
+    "command" : "clLP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "f690" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Punch (Target)",
+    "hits" : [ "3a48" ],
+    "command" : "clMP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "fc48" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Heavy Punch",
+    "hits" : [ "fa10", "fa10" ],
+    "command" : "clHP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Heavy Punch (Target)",
+    "hits" : [ "3f28" ],
+    "command" : "clHP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "0018" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "05d0" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick (Target)",
+    "hits" : [ "36c8" ],
+    "command" : "5MK",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "0b10" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick (Target)",
+    "hits" : [ "4290" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick (Target)",
+    "hits" : [ "3828" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Close Heavy Kick",
+    "hits" : [ "0920", "0920" ],
+    "command" : "clHK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "1058" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "1118" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "12a8" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "14e0" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "15f0" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "19c0" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick (Target)",
+    "hits" : [ "3290" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "1c10" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "1d10" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "20f0" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "2210" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Kick",
+    "hits" : [ "2330" ],
+    "command" : "njHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "2450" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "25b0" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "1ee8" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "2748" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "2878" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "29a8" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "dec0" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "2eb8" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Personal Action",
+    "hits" : [ "e2f0" ],
+    "command" : "HP+HK",
+    "type" : 0
+  },
+  {
+    "name" : "Down-Forward Medium Kick",
+    "hits" : [ "1740" ],
+    "command" : "3MK",
+    "type" : 1
+  },
+  {
+    "name" : "Back Medium Punch",
+    "hits" : [ "f838", "f838" ],
+    "command" : "4MP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Light Kick",
+    "hits" : [ "01a8" ],
+    "command" : "6LK",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Medium Kick",
+    "hits" : [ "0748" ],
+    "command" : "6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Medium Kick (TC)",
+    "hits" : [ "30a0" ],
+    "command" : "6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Jump Forward Medium Kick (TC)",
+    "hits" : [ "3480" ],
+    "command" : "j6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Back Medium Kick",
+    "hits" : [ "0398" ],
+    "command" : "4MK",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Heavy Kick",
+    "hits" : [ "0d90" ],
+    "command" : "6HK",
+    "type" : 1
+  },
+  {
+    "name" : "Jump Forward Heavy Punch (TC)",
+    "hits" : [ "0d90" ],
+    "command" : "j6HP",
+    "type" : 1
+  },
+  {
+    "name" : "Kunai",
+    "hits" : [ "4f80" ],
+    "command" : "j236P",
+    "type" : 2
+  },
+  {
+    "name" : "Kunai",
+    "hits" : [ "aea0" ],
+    "command" : "j236P",
+    "type" : 2
+  },
+  {
+    "name" : "Kunai",
+    "hits" : [ "b150" ],
+    "command" : "j236P",
+    "type" : 2
+  },
+  {
+    "name" : "Kunai",
+    "hits" : [ "5690" ],
+    "command" : "j236P",
+    "type" : 2
+  },
+  {
+    "name" : "Kunai",
+    "hits" : [ "abf0" ],
+    "command" : "j236P",
+    "type" : 2
+  },
+  {
+    "name" : "Kunai (EX)",
+    "hits" : [ "b400", "b400" ],
+    "command" : "j236PP",
+    "type" : 2
+  },
+  {
+    "name" : "Raida (Light)",
+    "hits" : [ "8e20" ],
+    "command" : "63214LP",
+    "type" : 2
+  },
+  {
+    "name" : "Raida (Medium)",
+    "hits" : [ "8f68" ],
+    "command" : "63214MP",
+    "type" : 2
+  },
+  {
+    "name" : "Raida (Heavy)",
+    "hits" : [ "90b0" ],
+    "command" : "63214HP",
+    "type" : 2
+  },
+  {
+    "name" : "Hien (Light)",
+    "hits" : [ "7ca0", "7ca0" ],
+    "command" : "421LK",
+    "type" : 2
+  },
+  {
+    "name" : "Hien (Medium)",
+    "hits" : [ "8100", "8100" ],
+    "command" : "421MK",
+    "type" : 2
+  },
+  {
+    "name" : "Hien (Heavy)",
+    "hits" : [ "8560", "8560" ],
+    "command" : "421HK",
+    "type" : 2
+  },
+  {
+    "name" : "Hien (EX)",
+    "hits" : [ "89c0", "89c0" ],
+    "command" : "421KK",
+    "type" : 2
+  },
+  {
+    "name" : "Kubiori (Light)",
+    "hits" : [ "91f8" ],
+    "command" : "236LP",
+    "type" : 2
+  },
+  {
+    "name" : "Kubiori (Medium)",
+    "hits" : [ "93b8" ],
+    "command" : "236MP",
+    "type" : 2
+  },
+  {
+    "name" : "Kubiori (Heavy)",
+    "hits" : [ "9578" ],
+    "command" : "236HP",
+    "type" : 2
+  },
+  {
+    "name" : "Kubiori (EX)",
+    "hits" : [ "9750", "bab8", "bdc8" ],
+    "command" : "236PP",
+    "type" : 2
+  },
+  {
+    "name" : "Kazekiri (Light)",
+    "hits" : [ "7120", "7120", "7120" ],
+    "command" : "623LK",
+    "type" : 2
+  },
+  {
+    "name" : "Kazekiri (Medium)",
+    "hits" : [ "7370", "7370", "7370" ],
+    "command" : "623MK",
+    "type" : 2
+  },
+  {
+    "name" : "Kazekiri (Heavy)",
+    "hits" : [ "75f0", "75f0", "75f0", "75f0" ],
+    "command" : "623HK",
+    "type" : 2
+  },
+  {
+    "name" : "Kazekiri (EX)",
+    "hits" : [ "7888", "7888", "7888", "7888" ],
+    "command" : "623KK",
+    "type" : 2
+  },
+  {
+    "name" : "Tsumuji (Light)",
+    "hits" : [ "9910", "9910" ],
+    "command" : "214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Tsumuji (Light, Low)",
+    "hits" : [ "a768" ],
+    "command" : "214LK, then hold down",
+    "type" : 2
+  },
+  {
+    "name" : "Tsumuji (Medium)",
+    "hits" : [ "9de8", "9de8", "9de8" ],
+    "command" : "214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Tsumuji (Heavy)",
+    "hits" : [ "a428", "a428", "f980" ],
+    "command" : "214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Tsumuji (Heavy, Low)",
+    "hits" : [ "fc60" ],
+    "command" : "214HK, then hold down",
+    "type" : 2
+  },
+  {
+    "name" : "Tsumuji (EX)",
+    "hits" : [ "e490", "e6f8", "e6f8", "e988" ],
+    "command" : "214KK",
+    "type" : 2
+  },
+  {
+    "name" : "Tsumuji (EX, Low)",
+    "hits" : [ "e810" ],
+    "command" : "214KK, then hold down",
+    "type" : 2
+  },
+  {
+    "name" : "Tsumuji (EX, Low)",
+    "hits" : [ "eb60" ],
+    "command" : "214KK, then hold down",
+    "type" : 2
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0", "d7a0" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "dae0" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "db38" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "d020" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "db90" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "d950" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "db90" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "d520" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "d8f8" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Kasumi Suzaku",
+    "hits" : [ "d8a0" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Yoroi Doushi",
+    "hits" : [ "c800", "c800", "c800", "c800", "c800", "c800", "c800", "c800", "c800", "c800", "c800", "c800" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Yami Shigure",
+    "hits" : [ "b740", "c0b8", "c0b8", "c0b8", "c0b8", "c0b8" ],
+    "command" : "236236P",
+    "type" : 3
+  }
+]

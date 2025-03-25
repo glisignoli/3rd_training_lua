@@ -1,0 +1,344 @@
+[
+  {
+    "name" : "Close Light Punch",
+    "hits" : [ "13a8" ],
+    "command" : "clLP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Punch",
+    "hits" : [ "1438" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "1598" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Punch",
+    "hits" : [ "14e8" ],
+    "command" : "clMP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "1818" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Heavy Punch",
+    "hits" : [ "1728" ],
+    "command" : "clHP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "1908" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "1a38" ],
+    "command" : "5MK",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Kick",
+    "hits" : [ "1988" ],
+    "command" : "clMK",
+    "type" : 0
+  },  
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "1bf8" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Close Heavy Kick",
+    "hits" : [ "1b08", "1b08" ],
+    "command" : "clHK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "1d28" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "1dd8" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "1e88" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "1f68" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "2008" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "20d8" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "21c8" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "2388" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "2448" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "2558" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Kick",
+    "hits" : [ "2628" ],
+    "command" : "njHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "2708" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "22a8" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "2800" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "28e0" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "29c0" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "2b30" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "98f8" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "3738" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Personal Action",
+    "hits" : [ "24cc" ],
+    "command" : "HP+HK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Medium Punch",
+    "hits" : [ "1638", "1638" ],
+    "command" : "6MP",
+    "type" : 1
+  },
+  {
+    "name" : "Gou Hadouken",
+    "hits" : [ "8210" ],
+    "command" : "236P",
+    "type" : 2
+  },
+  {
+    "name" : "Shakunetsu Hadouken (Light)",
+    "hits" : [ "a330" ],
+    "command" : "63214LP",
+    "type" : 2
+  },
+  {
+    "name" : "Shakunetsu Hadouken (Medium)",
+    "hits" : [ "a508", "a508" ],
+    "command" : "63214MP",
+    "type" : 2
+  },
+  {
+    "name" : "Shakunetsu Hadouken (Heavy)",
+    "hits" : [ "a6e0", "a6e0", "a6e0" ],
+    "command" : "63214HP",
+    "type" : 2
+  },
+  {
+    "name" : "Zankuu Hadouken",
+    "hits" : [ "8800", "a130", "7684" ],
+    "command" : "j236P",
+    "type" : 2
+  },
+  {
+    "name" : "Hyakki Goujin",
+    "hits" : [ "b218" ],
+    "command" : "623K, K",
+    "type" : 1
+  },
+  {
+    "name" : "Hyakki Goushou",
+    "hits" : [ "b118" ],
+    "command" : "623K, P",
+    "type" : 1
+  },
+  {
+    "name" : "Hyakki Shuu",
+    "hits" : [ "af08" ],
+    "command" : "623K",
+    "type" : 1
+  },
+  {
+    "name" : "Hyakki Gousai",
+    "hits" : [ "b308" ],
+    "command" : "623K, LP+LK",
+    "type" : 1
+  },
+  {
+    "name" : "Gou Shoryuken (Light)",
+    "hits" : [ "84f8" ],
+    "command" : "623LP",
+    "type" : 2
+  },
+  {
+    "name" : "Gou Shoryuken (Medium)",
+    "hits" : [ "85c8", "85c8" ],
+    "command" : "623MP",
+    "type" : 2
+  },
+  {
+    "name" : "Gou Shoryuken (Heavy)",
+    "hits" : [ "8658", "8658", "8658" ],
+    "command" : "623HP",
+    "type" : 2
+  },
+  {
+    "name" : "Tatsumaki (Light)",
+    "hits" : [ "86e8" ],
+    "command" : "214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Tatsumaki (Medium)",
+    "hits" : [ "87f8", "87f8", "87f8", "87f8", "87f8" ],
+    "command" : "214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Tatsumaki (Heavy)",
+    "hits" : [ "8968" ],
+    "command" : "214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Air Tatsumaki (Light)",
+    "hits" : [ "9618" ],
+    "command" : "j214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Air Tatsumaki (Medium)",
+    "hits" : [ "9738" ],
+    "command" : "j214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Air Tatsumaki (Heavy)",
+    "hits" : [ "9818" ],
+    "command" : "j214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Messatsu Gou Hadou",
+    "hits" : [ "8af8", "68cc", "68cc", "68cc", "68cc", "68cc" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Tenma Gou Zankuu",
+    "hits" : [ "93f8", "93f8", "93f8", "93f8", "93f8", "93f8" ],
+    "command" : "j236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Messatsu Gou Shoryuu",
+    "hits" : [ "8c28", "8c28", "8c28", "8c28", "8c28", "8c28", "8c28" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Messatsu Gou Rasen (Ground)",
+    "hits" : [ "8fe0", "8fe0", "8fe0", "8fe0", "8fe0", "8fe0", "8fe0", "8fe0", "8fe0", "8fe0", "8fe0", "8fe0" ],
+    "command" : "236236K",
+    "type" : 3
+  },
+  {
+    "name" : "Messatsu Gou Rasen (Air)",
+    "hits" : [ "a8b8", "a8b8", "a8b8", "a8b8", "a8b8", "a8b8", "a8b8", "a8b8", "a8b8", "a8b8" ],
+    "command" : "236236K",
+    "type" : 3
+  },
+  {
+    "name" : "Kongou Kokuretsu Zan",
+    "hits" : [ "9c98", "9c98", "9c98", "9c98", "9c98", "9c98", "9c98", "9c98", "9c98" ],
+    "command" : "222PPP",
+    "type" : 3
+  },
+  {
+    "name" : "Shun Goku Satsu",
+    "hits" : [ "9c18" ],
+    "command" : "LP-LP-6-LK-HP",
+    "type" : 3
+  }
+]

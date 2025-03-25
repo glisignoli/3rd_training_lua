@@ -1,0 +1,326 @@
+[
+  {
+    "name" : "Light Punch",
+    "hits" : [ "d774" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "d864" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "daa4" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "dcfc" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "ddac" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "e0b4" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "e4ac" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "e65c" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "e72c" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "eaf4" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "ebc4" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "ec84" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "ee14" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "eeb4" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "ef94" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "f074" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "f114" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "f1f4" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "6784" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "f764" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Personal Action",
+    "hits" : [ "6aac" ],
+    "command" : "HP+HK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Medium Punch",
+    "hits" : [ "d994" ],
+    "command" : "6MP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Heavy Punch",
+    "hits" : [ "dc1c" ],
+    "command" : "6HP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Medium Kick",
+    "hits" : [ "df0c" ],
+    "command" : "6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Metallic Sphere (Light)",
+    "hits" : [ "553c" ],
+    "command" : "236LP",
+    "type" : 2
+  },
+  {
+    "name" : "Metallic Sphere (Medium)",
+    "hits" : [ "58bc" ],
+    "command" : "236MP",
+    "type" : 2
+  },
+  {
+    "name" : "Metallic Sphere (Heavy)",
+    "hits" : [ "5c3c" ],
+    "command" : "236HP",
+    "type" : 2
+  },
+  {
+    "name" : "Metallic Sphere (EX)",
+    "hits" : [ "5fbc", "5fbc" ],
+    "command" : "236PP",
+    "type" : 2
+  },
+  {
+    "name" : "Violence Knee Drop (Light)",
+    "hits" : [ "4cbc" ],
+    "command" : "[2]8LK",
+    "type" : 2
+  },
+  {
+    "name" : "Violence Knee Drop (Medium)",
+    "hits" : [ "4e4c" ],
+    "command" : "[2]8MK",
+    "type" : 2
+  },
+  {
+    "name" : "Violence Knee Drop (Heavy)",
+    "hits" : [ "4fdcc" ],
+    "command" : "[2]8HK",
+    "type" : 2
+  },
+  {
+    "name" : "Violence Knee Drop (EX)",
+    "hits" : [ "516c", "516c" ],
+    "command" : "[2]8KK",
+    "type" : 2
+  },
+  {
+    "name" : "Chariot Rush (Light)",
+    "hits" : [ "6c1c" ],
+    "command" : "[4]6LK",
+    "type" : 2
+  },
+  {
+    "name" : "Chariot Rush (Medium)",
+    "hits" : [ "6dfc" ],
+    "command" : "[4]6MK",
+    "type" : 2
+  },
+  {
+    "name" : "Chariot Rush (Heavy)",
+    "hits" : [ "6fec" ],
+    "command" : "[4]6HK",
+    "type" : 2
+  },
+  {
+    "name" : "Chariot Rush (EX)",
+    "hits" : [ "720c", "720c" ],
+    "command" : "[4]6KK",
+    "type" : 2
+  },
+  {
+    "name" : "Headbutt (Light)",
+    "hits" : [ "6254" ],
+    "command" : "[2]8LP",
+    "type" : 2
+  },
+  {
+    "name" : "Headbutt (Medium)",
+    "hits" : [ "6314" ],
+    "command" : "[2]8MP",
+    "type" : 2
+  },
+  {
+    "name" : "Headbutt (Heavy)",
+    "hits" : [ "63d4" ],
+    "command" : "[2]8HP",
+    "type" : 2
+  },
+  {
+    "name" : "Headbutt (EX)",
+    "hits" : [ "6494", "6494" ],
+    "command" : "[2]8PP",
+    "type" : 2
+  },
+  {
+    "name" : "Tyrant Punish",
+    "hits" : [ "79dc", "79dc", "79dc", "79dc", "79dc" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Temporal Thunder",
+    "hits" : [ "783c", "783c", "783c", "783c", "783c" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "4e6c", "4e6c", "4e6c", "4e6c", "4e6c", "4e6c" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "523c" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "5734" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "57a4" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "3ed0" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "a244" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "8010" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "3638" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "765c" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "55bc" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector",
+    "hits" : [ "537c" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Aegis Reflector (EX)",
+    "hits" : [ "774c" ],
+    "command" : "236236PP",
+    "type" : 3
+  }
+]

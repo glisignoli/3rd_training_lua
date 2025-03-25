@@ -1,0 +1,332 @@
+[
+  {
+    "name" : "Light Punch",
+    "hits" : [ "32c4" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "3484" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Punch",
+    "hits" : [ "3394" ],
+    "command" : "clMP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "3584" ],
+    "command" : "5HP",
+    "type" : 0
+  }, 
+  {
+    "name" : "Light Kick",
+    "hits" : [ "3714" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "37e4" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "3a64" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "3c84" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "3d14" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "3e84", "3e84", "3e84" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "462c" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "46fc" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "480c" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "4a2c" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "4aec" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "4bac" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "4ccc" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "4d9c" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Kick",
+    "hits" : [ "4e9c" ],
+    "command" : "njHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "4f8c" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "504c" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "510c" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "522c" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "52fc" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "53fc" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Airdash Light Punch",
+    "hits" : [ "5a6c" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Airdash Medium Punch",
+    "hits" : [ "5b2c" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Airdash Heavy Punch",
+    "hits" : [ "5bec" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Airdash Light Kick",
+    "hits" : [ "5d0c" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Airdash Medium Kick",
+    "hits" : [ "5ddc" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Airdash Heavy Kick",
+    "hits" : [ "5edc" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "e1b4" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "58dc" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Punch",
+    "hits" : [ "a320" ],
+    "command" : "clMP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Shoryuken",
+    "hits" : [ "0884" ],
+    "command" : "623LP",
+    "type" : 2
+  },
+  {
+    "name" : "Back Medium Kick",
+    "hits" : [ "3934" ],
+    "command" : "4HK",
+    "type" : 1
+  },
+  {
+    "name" : "N.D.L. (Light)",
+    "hits" : [ "c534" ],
+    "command" : "236LP",
+    "type" : 2
+  },
+  {
+    "name" : "N.D.L. (Medium)",
+    "hits" : [ "c684" ],
+    "command" : "236MP",
+    "type" : 2
+  },
+  {
+    "name" : "N.D.L. (Heavy)",
+    "hits" : [ "c7d4" ],
+    "command" : "236HP",
+    "type" : 2
+  },
+  {
+    "name" : "N.D.L. (EX)",
+    "hits" : [ "c924", "c924" ],
+    "command" : "236PP",
+    "type" : 2
+  },
+  {
+    "name" : "A.X.E. (Light) ",
+    "hits" : [ "b574", "b574" ],
+    "command" : "214LP",
+    "type" : 2
+  },
+  {
+    "name" : "A.X.E. (Medium)",
+    "hits" : [ "b9c4", "b9c4", "b9c4", "b9c4" ],
+    "command" : "214MP",
+    "type" : 2
+  },
+  {
+    "name" : "A.X.E. (Heavy)",
+    "hits" : [ "bd94", "bd94", "bd94", "bd94", "bd94" ],
+    "command" : "214HP",
+    "type" : 2
+  },
+  {
+    "name" : "A.X.E. (EX)",
+    "hits" : [ "c174", "c174", "c174", "c174", "c174", "c174" ],
+    "command" : "214PP",
+    "type" : 2
+  },
+  {
+    "name" : "Air A.X.E. (Light)",
+    "hits" : [ "cd94", "cd94", "cd94" ],
+    "command" : "j214LP",
+    "type" : 2
+  },
+  {
+    "name" : "Air A.X.E. (Medium)",
+    "hits" : [ "d114", "d114", "d114", "d114" ],
+    "command" : "j214MP",
+    "type" : 2
+  },
+  {
+    "name" : "Air A.X.E. (Heavy)",
+    "hits" : [ "d494", "d494", "d494", "d494" ],
+    "command" : "j214HP",
+    "type" : 2
+  },
+  {
+    "name" : "Air A.X.E. (EX)",
+    "hits" : [ "d814", "d814", "d814", "d814", "d814" ],
+    "command" : "j214KK",
+    "type" : 2
+  },
+  {
+    "name" : "D.R.A. (Light)",
+    "hits" : [ "a9dc" ],
+    "command" : "j214LK",
+    "type" : 2
+  },
+  {
+    "name" : "D.R.A. (Medium)",
+    "hits" : [ "ad34" ],
+    "command" : "j214MK",
+    "type" : 2
+  },
+  {
+    "name" : "D.R.A. (Heavy)",
+    "hits" : [ "af94" ],
+    "command" : "j214HK",
+    "type" : 2
+  },
+  {
+    "name" : "D.R.A. (EX)",
+    "hits" : [ "b1f4", "b1f4" ],
+    "command" : "j214KK",
+    "type" : 2
+  },
+  {
+    "name" : "X.N.D.L.",
+    "hits" : [ "ca84", "ca84", "ca84", "ca84", "ca84", "ca84", "ca84" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "X.F.L.A.T.",
+    "hits" : [ "ed84", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4", "f1e4" ],
+    "command" : "j236236K",
+    "type" : 3
+  },
+  {
+    "name" : "X.F.L.A.T. (Air Hit)",
+    "hits" : [ "ed84", "f5e4", "f5e4", "f5e4", "f5e4", "f5e4", "f5e4", "f5e4", "f5e4", "f5e4" ],
+    "command" : "j236236K",
+    "type" : 3
+  }
+]

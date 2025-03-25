@@ -1,0 +1,344 @@
+[
+  {
+    "name" : "Light Punch",
+    "hits" : [ "1d10" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "1ec0" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "2100" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "23d0" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "25f0" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "28c0" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "2be0" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "2cc0" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "2de0" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "2f10" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "2fe0" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "30c0" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "31e0" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "32c0" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "3380" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "3460" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "3520" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Kick",
+    "hits" : [ "3610" ],
+    "command" : "njHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "3720" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "37e0" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "38e0" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "3a50" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "3b10" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "3c00" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "db10" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "4718" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Personal Action",
+    "hits" : [ "f7a8" ],
+    "command" : "HP+HK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Light Punch",
+    "hits" : [ "1de0" ],
+    "command" : "6LP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Medium Punch",
+    "hits" : [ "1fc0" ],
+    "command" : "6MP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Heavy Punch",
+    "hits" : [ "2220", "48a8", "48a8" ],
+    "command" : "6HP",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Light Kick",
+    "hits" : [ "24e0" ],
+    "command" : "6LK",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Medium Kick",
+    "hits" : [ "2720" ],
+    "command" : "6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Light Kick",
+    "hits" : [ "2a20" ],
+    "command" : "6HK",
+    "type" : 1
+  },
+  {
+    "name" : "Hayate (lvl 0)",
+    "hits" : [ "e2d0" ],
+    "command" : "236P",
+    "type" : 2
+  },
+  {
+    "name" : "Hayate (lvl 1)",
+    "hits" : [ "e3f8" ],
+    "command" : "236P(hold)",
+    "type" : 2
+  },
+  {
+    "name" : "Hayate (lvl 2)",
+    "hits" : [ "e520" ],
+    "command" : "236P(hold)",
+    "type" : 2
+  },
+  {
+    "name" : "Hayate (lvl 3)",
+    "hits" : [ "e750" ],
+    "command" : "236P(MAX hold)",
+    "type" : 2
+  },
+  {
+    "name" : "Hayate (EX)",
+    "hits" : [ "e860" ],
+    "command" : "236PP",
+    "type" : 2
+  },
+  {
+    "name" : "Karakusa (Light)",
+    "hits" : [ "0c10" ],
+    "command" : "63214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Karakusa (Medium)",
+    "hits" : [ "0d90" ],
+    "command" : "63214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Karakusa (Heavy)",
+    "hits" : [ "0e60" ],
+    "command" : "63214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Oroshi (Light)",
+    "hits" : [ "ebb8" ],
+    "command" : "214LP",
+    "type" : 2
+  },
+  {
+    "name" : "Oroshi (Medium)",
+    "hits" : [ "ed98" ],
+    "command" : "214MP",
+    "type" : 2
+  },
+  {
+    "name" : "Oroshi (Heavy)",
+    "hits" : [ "ee98" ],
+    "command" : "214HP",
+    "type" : 2
+  },
+  {
+    "name" : "Oroshi (EX)",
+    "hits" : [ "ef98" ],
+    "command" : "214PP",
+    "type" : 2
+  },
+  {
+    "name" : "Tsurugi (Light)",
+    "hits" : [ "2190" ],
+    "command" : "j214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Tsurugi (Medium)",
+    "hits" : [ "2310" ],
+    "command" : "j214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Tsurugi (Heavy)",
+    "hits" : [ "2410" ],
+    "command" : "j214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Tsurugi (EX)",
+    "hits" : [ "2510", "2510" ],
+    "command" : "j214KK",
+    "type" : 2
+  },
+   {
+    "name" : "Fukiage (Light)",
+    "hits" : [ "f0a8" ],
+    "command" : "623LP",
+    "type" : 2
+  },
+  {
+    "name" : "Fukiage (Medium)",
+    "hits" : [ "f3e8" ],
+    "command" : "623MP",
+    "type" : 2
+  },
+  {
+    "name" : "Fukiage (Heavy)",
+    "hits" : [ "f518" ],
+    "command" : "623HP",
+    "type" : 2
+  },
+  {
+    "name" : "Fukiage (EX)",
+    "hits" : [ "f648", "f648" ],
+    "command" : "623PP",
+    "type" : 2
+  },
+  {
+    "name" : "Seichuusen Godanzuki",
+    "hits" : [ "1898", "1898", "1898", "1898", "1898" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Abare Tosanami (Light)",
+    "hits" : [ "fde8", "0290", "0290", "0290"],
+    "command" : "236236LK",
+    "type" : 3
+  },
+  {
+    "name" : "Abare Tosanami (Medium)",
+    "hits" : [ "fec8", "0290", "0290", "0290" ],
+    "command" : "236236MK",
+    "type" : 3
+  },
+  {
+    "name" : "Abare Tosanami (Heavy)",
+    "hits" : [ "ffa8", "0290", "0290", "0290" ],
+    "command" : "236236HK",
+    "type" : 3
+  }
+]

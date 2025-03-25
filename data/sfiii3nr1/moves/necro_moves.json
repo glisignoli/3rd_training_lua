@@ -1,0 +1,338 @@
+[
+  {
+    "name" : "Light Punch",
+    "hits" : [ "c914" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "cc1c" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "cf84" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "d40c" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "d5cc" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "d85c" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "dccc" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "dd9c" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "defc" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "e18c" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "e29c" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "e444" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "e5e4" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "e6b4" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "e7a4" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "e954" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "eef4" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "efa4" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "f084" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "f224" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "ec34" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "ed74" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "7cf4" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "fbbc" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Personal Action",
+    "hits" : [ "8574", "8574", "8574" ],
+    "command" : "HP+HK",
+    "type" : 0
+  },
+  {
+    "name" : "Back Light Punch",
+    "hits" : [ "ca74" ],
+    "command" : "4LP",
+    "type" : 1
+  }, 
+  {
+    "name" : "Back Medium Punch",
+    "hits" : [ "cdc4" ],
+    "command" : "4MP",
+    "type" : 1
+  }, 
+  {
+    "name" : "Back Heavy Punch",
+    "hits" : [ "d1a4" ],
+    "command" : "4HP",
+    "type" : 1
+  }, 
+  {
+    "name" : "Back Light Kick",
+    "hits" : [ "d4ec" ],
+    "command" : "4LK",
+    "type" : 1
+  }, 
+  {
+    "name" : "Back Medium Kick",
+    "hits" : [ "d6fc" ],
+    "command" : "4MK",
+    "type" : 1
+  }, 
+  {
+    "name" : "Back Light Kick",
+    "hits" : [ "dadc" ],
+    "command" : "4HK",
+    "type" : 1
+  }, 
+  {
+    "name" : "Down-Back Heavy Punch",
+    "hits" : [ "e01c" ],
+    "command" : "1HP",
+    "type" : 1
+  }, 
+  {
+    "name" : "Divekick (Light)",
+    "hits" : [ "e9e4" ],
+    "command" : "j2LK",
+    "type" : 1
+  }, 
+  {
+    "name" : "Divekick (Medium)",
+    "hits" : [ "f2cc" ],
+    "command" : "j2MK",
+    "type" : 1
+  }, 
+  {
+    "name" : "Divekick (Heavy)",
+    "hits" : [ "f51c", "f51c" ],
+    "command" : "j2HK",
+    "type" : 1
+  },
+  {
+    "name" : "Electric Shock (Light)",
+    "hits" : [ "651c" ],
+    "command" : "623LP",
+    "type" : 2
+  },
+  {
+    "name" : "Electric Shock (Medium)",
+    "hits" : [ "680c", "680c" ],
+    "command" : "623MP",
+    "type" : 2
+  },
+  {
+    "name" : "Electric Shock (Heavy)",
+    "hits" : [ "6b1c", "6b1c", "6b1c", "6b1c" ],
+    "command" : "623HP",
+    "type" : 2
+  },
+  {
+    "name" : "Snake Fang (Light)",
+    "hits" : [ "7274" ],
+    "command" : "41236LK",
+    "type" : 2
+  },
+  {
+    "name" : "Snake Fang (Medium)",
+    "hits" : [ "7374" ],
+    "command" : "41236MK",
+    "type" : 2
+  },
+  {
+    "name" : "Snake Fang (Heavy)",
+    "hits" : [ "7474" ],
+    "command" : "41236HK",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Punch (Light)",
+    "hits" : [ "4fdc", "4fdc" ],
+    "command" : "41236LP",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Punch (Medium)",
+    "hits" : [ "53dc", "53dc" ],
+    "command" : "41236MP",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Punch (Heavy)",
+    "hits" : [ "5824", "5824", "5824" ],
+    "command" : "41236HP",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Punch (EX)",
+    "hits" : [ "5e7c", "5e7c", "5e7c", "5e7c", "5e7c" ],
+    "command" : "41236PP",
+    "type" : 2
+  },
+  {
+    "name" : "Flying Viper (Light)",
+    "hits" : [ "7574" ],
+    "command" : "214LP",
+    "type" : 2
+  },
+  {
+    "name" : "Flying Viper (Medium)",
+    "hits" : [ "7674" ],
+    "command" : "214MP",
+    "type" : 2
+  },
+  {
+    "name" : "Flying Viper (Heavy)",
+    "hits" : [ "7774" ],
+    "command" : "214HP",
+    "type" : 2
+  },
+  {
+    "name" : "Flying Viper (EX)",
+    "hits" : [ "7874", "7874" ],
+    "command" : "214PP",
+    "type" : 2
+  },
+  {
+    "name" : "Raging Cobra (Light)",
+    "hits" : [ "7d94" ],
+    "command" : "214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Raging Cobra (Medium)",
+    "hits" : [ "7f24" ],
+    "command" : "214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Raging Cobra (Heavy)",
+    "hits" : [ "80b4" ],
+    "command" : "214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Raging Cobra (EX)",
+    "hits" : [ "8244", "8244" ],
+    "command" : "214KK",
+    "type" : 2
+  },
+  {
+    "name" : "Magnetic Storm",
+    "hits" : [ "6e8c", "6e8c", "6e8c", "6e8c", "6e8c", "6e8c", "6e8c", "6e8c", "6e8c", "6e8c" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Slam Dance",
+    "hits" : [ "7a14" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Electric Snake",
+    "hits" : [ "4dec", "4dec", "4dec" ],
+    "command" : "236236P",
+    "type" : 3
+  }
+]

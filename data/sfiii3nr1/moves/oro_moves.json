@@ -1,0 +1,368 @@
+[
+  {
+    "name" : "Close Light Punch",
+    "hits" : [ "48f0" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Punch",
+    "hits" : [ "49d0" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "4c40" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Punch",
+    "hits" : [ "4a80" ],
+    "command" : "clMP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "4f08", "4f08" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "5258" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "54f0" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "56b0" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Close Light Kick",
+    "hits" : [ "5188" ],
+    "command" : "clLK",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Kick",
+    "hits" : [ "5378" ],
+    "command" : "clMK",
+    "type" : 0
+  },  
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "58e8" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "59a8" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "5a68" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "5c10" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "5da0" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "5ed0" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "5fc0" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "60d0" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "6200" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "6300" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "6460" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Kick",
+    "hits" : [ "6590" ],
+    "command" : "njHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "6708" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "6888" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "6a08", "6a08" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "6bf8" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "6d08" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "6ef8" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "0fbc" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Back Throw",
+    "hits" : [ "73c8" ],
+    "command" : "4LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "72c8" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Air Throw",
+    "hits" : [ "7438" ],
+    "command" : "jLP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Medium Punch",
+    "hits" : [ "4d30" ],
+    "command" : "6MP",
+    "type" : 1
+  },
+  {
+    "name" : "Sun Disk Palm (Light)",
+    "hits" : [ "e3dc" ],
+    "command" : "[4]6LP",
+    "type" : 2
+  },
+  {
+    "name" : "Sun Disk Palm (Medium)",
+    "hits" : [ "e5cc" ],
+    "command" : "[4]6MP",
+    "type" : 2
+  },
+  {
+    "name" : "Sun Disk Palm (Heavy)",
+    "hits" : [ "e75c" ],
+    "command" : "[4]6HP",
+    "type" : 2
+  },
+  {
+    "name" : "Sun Disk Palm (EX)",
+    "hits" : [ "e8ec", "e8ec" ],
+    "command" : "[4]6PP",
+    "type" : 2
+  },
+  {
+    "name" : "Sun Disk Palm (Cancel)",
+    "hits" : [ "f2bc" ],
+    "command" : "[4]6P",
+    "type" : 2
+  },
+  {
+    "name" : "Human Pillar Driver (Light)",
+    "hits" : [ "d71c" ],
+    "command" : "63214LP",
+    "type" : 2
+  },
+  {
+    "name" : "Human Pillar Driver (Medium)",
+    "hits" : [ "d89c" ],
+    "command" : "63214MP",
+    "type" : 2
+  },
+  {
+    "name" : "Human Pillar Driver (Heavy)",
+    "hits" : [ "d96c" ],
+    "command" : "63214HP",
+    "type" : 2
+  },
+  {
+    "name" : "Oniyama (Light)",
+    "hits" : [ "dd6c" ],
+    "command" : "[2]8LP",
+    "type" : 2
+  },
+  {
+    "name" : "Oniyama (Medium)",
+    "hits" : [ "dee4" ],
+    "command" : "[2]8MP",
+    "type" : 2
+  },
+  {
+    "name" : "Oniyama (Heavy)",
+    "hits" : [ "e02c", "e02c" ],
+    "command" : "[2]8HP",
+    "type" : 2
+  },
+  {
+    "name" : "Oniyama (EX)",
+    "hits" : [ "e1ec", "e1ec", "e1ec", "e1ec" ],
+    "command" : "[2]8PP",
+    "type" : 2
+  },
+  {
+    "name" : "Jinchu Nobori (Light)",
+    "hits" : [ "08bc" ],
+    "command" : "236LK",
+    "type" : 2
+  },
+  {
+    "name" : "Jinchu Nobori (Medium)",
+    "hits" : [ "0b2c" ],
+    "command" : "236MK",
+    "type" : 2
+  },
+  {
+    "name" : "Jinchu Nobori (Heavy)",
+    "hits" : [ "0c9c" ],
+    "command" : "236HK",
+    "type" : 2
+  },
+  {
+    "name" : "Jinchu Nobori (EX)",
+    "hits" : [ "0e0c" ],
+    "command" : "236KK",
+    "type" : 2
+  },
+  {
+    "name" : "Jinchu Nobori (Air)",
+    "hits" : [ "012c", "012c", "012c", "012c" ],
+    "command" : "j236K",
+    "type" : 2
+  },
+  {
+    "name" : "Kishin Riki (Punch)",
+    "hits" : [ "74f8" ],
+    "command" : "xP in Kishin Riki",
+    "type" : 3
+  },
+  {
+    "name" : "Air Kishin Riki (Punch)",
+    "hits" : [ "7658" ],
+    "command" : "jxP in Kishin Riki",
+    "type" : 3
+  },
+  {
+    "name" : "Kishin Riki (EX)",
+    "hits" : [ "fd04" ],
+    "command" : "236236PP",
+    "type" : 3
+  },
+  {
+    "name" : "Yagyou Dama",
+    "hits" : [ "f62c" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Yagyou Dama",
+    "hits" : [ "a524" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Yagyou Dama",
+    "hits" : [ "a094" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Yagyou Dama",
+    "hits" : [ "a484" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Yagyou Dama",
+    "hits" : [ "a5c4" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Yagyou Dama",
+    "hits" : [ "ac2c" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Yagyou Dama",
+    "hits" : [ "a3f4" ],
+    "command" : "watch the demo!",
+    "type" : 3
+  },
+  {
+    "name" : "Yagyou Dama (EX)",
+    "hits" : [ "f72c", "f72c", "f72c", "c3a8", "c3a8", "c3a8", "c3a8", "c3a8" ],
+    "command" : "236236PP",
+    "type" : 3
+  }
+]

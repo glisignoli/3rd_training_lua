@@ -1,0 +1,392 @@
+[
+  {
+    "name" : "Light Punch",
+    "hits" : [ "c114" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "c2d4" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch (Target)",
+    "hits" : [ "75a4" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Punch",
+    "hits" : [ "c224" ],
+    "command" : "clMP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "c4c4" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch (Target)",
+    "hits" : [ "ef0c" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Close Heavy Punch",
+    "hits" : [ "c3a4" ],
+    "command" : "clHP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "c66c" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Light Kick (Target)",
+    "hits" : [ "748c" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "c89c" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick (Target)",
+    "hits" : [ "f334" ],
+    "command" : "5MK",
+    "type" : 0
+  },
+  {
+    "name" : "Close Medium Kick",
+    "hits" : [ "c79c" ],
+    "command" : "clMK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "ce54" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick (Target)",
+    "hits" : [ "f50c" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "d044" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "d1c4" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "d2b4", "d2b4" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "d45c" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "d52c" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "d6a4" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "d8ac" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "d99c" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "da8c" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "dbfc" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "dd3c" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Kick",
+    "hits" : [ "de8c" ],
+    "command" : "njHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "df8c" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "e08c" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "e17c" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "e25c" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "e44c" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "e65c" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "dd18" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "1b34" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Throw",
+    "hits" : [ "1c34" ],
+    "command" : "6LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Back Throw",
+    "hits" : [ "ecd4" ],
+    "command" : "4LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Personal Action",
+    "hits" : [ "e288" ],
+    "command" : "HP+HK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Medium Kick",
+    "hits" : [ "caa4" ],
+    "command" : "6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Back Heavy Punch (Target)",
+    "hits" : [ "f0fc" ],
+    "command" : "4HP",
+    "type" : 1
+  },
+  {
+    "name" : "Jumping DF Medium Kick (Target)",
+    "hits" : [ "ed34" ],
+    "command" : "j3MK",
+    "type" : 1
+  },
+  {
+    "name" : "Divekick (Light)",
+    "hits" : [ "e39c" ],
+    "command" : "j2LK",
+    "type" : 1
+  },
+  {
+    "name" : "Divekick (Medium)",
+    "hits" : [ "e5ac" ],
+    "command" : "j2MK",
+    "type" : 1
+  },
+  {
+    "name" : "Divekick (Heavy)",
+    "hits" : [ "e75c" ],
+    "command" : "j2HK",
+    "type" : 1
+  },
+  {
+    "name" : "Tourou Zan (Light)",
+    "hits" : [ "a498" ],
+    "command" : "236LP",
+    "type" : 2
+  },
+  {
+    "name" : "Tourou Zan (Medium)",
+    "hits" : [ "aa18" ],
+    "command" : "236MP",
+    "type" : 2
+  },
+  {
+    "name" : "Tourou Zan (Heavy)",
+    "hits" : [ "af98" ],
+    "command" : "236HP",
+    "type" : 2
+  },
+  {
+    "name" : "Tourou Zan (EX)",
+    "hits" : [ "b518" ],
+    "command" : "236PP",
+    "type" : 2
+  },
+  {
+    "name" : "Tourou Zan (Light, KD)",
+    "hits" : [ "fa98" ],
+    "command" : "236LP",
+    "type" : 2
+  },
+  {
+    "name" : "Tourou Zan (Medium, KD)",
+    "hits" : [ "fc10" ],
+    "command" : "236MP",
+    "type" : 2
+  },
+  {
+    "name" : "Tourou Zan (Heavy, KD)",
+    "hits" : [ "fd88" ],
+    "command" : "236HP",
+    "type" : 2
+  },
+  {
+    "name" : "Tourou Zan (EX, KD)",
+    "hits" : [ "e7d8" ],
+    "command" : "236PP",
+    "type" : 2
+  },
+  {
+    "name" : "GJ Tourou Zan (Light)",
+    "hits" : [ "e5f8" ],
+    "command" : "236LP",
+    "type" : 2
+  },
+  {
+    "name" : "GJ Tourou Zan (Medium)",
+    "hits" : [ "e698" ],
+    "command" : "236MP",
+    "type" : 2
+  },
+  {
+    "name" : "GJ Tourou Zan (Heavy)",
+    "hits" : [ "e738" ],
+    "command" : "236HP",
+    "type" : 2
+  },
+  {
+    "name" : "GJ Tourou Zan (Light, 2nd)",
+    "hits" : [ "e950" ],
+    "command" : "...>236LP",
+    "type" : 2
+  },
+  {
+    "name" : "GJ Tourou Zan (Medium, 2nd)",
+    "hits" : [ "e9f0" ],
+    "command" : "...>236MP",
+    "type" : 2
+  },
+  {
+    "name" : "GJ Tourou Zan (Heavy, 2nd)",
+    "hits" : [ "ea90" ],
+    "command" : "...>236HP",
+    "type" : 2
+  },
+  {
+    "name" : "Senkyuutai (Light)",
+    "hits" : [ "9870", "9870" ],
+    "command" : "236LK",
+    "type" : 2
+  },
+  {
+    "name" : "Senkyuutai (Medium)",
+    "hits" : [ "9a30", "9a30" ],
+    "command" : "236MK",
+    "type" : 2
+  },
+  {
+    "name" : "Senkyuutai (Heavy)",
+    "hits" : [ "9cc8", "9cc8" ],
+    "command" : "236HK",
+    "type" : 2
+  },
+  {
+    "name" : "Senkyuutai (EX)",
+    "hits" : [ "a0b0", "a0b0", "a0b0" ],
+    "command" : "236KK",
+    "type" : 2
+  },
+  {
+    "name" : "Byakko Soushouda",
+    "hits" : [ "94d8" ],
+    "command" : "214P",
+    "type" : 2
+  },
+  {
+    "name" : "Zenpou Tenshin",
+    "hits" : [ "c830" ],
+    "command" : "63214K",
+    "type" : 2
+  },
+  {
+    "name" : "Raishin Mahhaken",
+    "hits" : [ "f0a0", "f308", "f308", "f308", "f308", "f308", "f308" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Tenshin Senkyuutai",
+    "hits" : [ "df28", "df28", "df28", "df28", "df28", "df28", "df28" ],
+    "command" : "236236K",
+    "type" : 3
+  }
+]

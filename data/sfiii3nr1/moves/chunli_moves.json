@@ -1,0 +1,327 @@
+
+[
+  {
+    "name" : "Close Light Punch",
+    "hits" : [ "b63c" ],
+    "command" : "clLP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Punch",
+    "hits" : [ "b6ec" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "b78c" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "baac" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "bdfc" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "c20c" ],
+    "command" : "5MK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Close Medium Kick",
+    "hits" : [ "bf5c" ],
+    "command" : "clMK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "c674" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Close Heavy Kick",
+    "hits" : [ "c52c" ],
+    "command" : "clHK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "c744" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "c804" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "c94c" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "cac4" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "cbb4" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "cce4" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "cfdc" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "d0ec" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "d1fc" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "d38c" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "d49c" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Kick",
+    "hits" : [ "d5ac" ],
+    "command" : "njHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "d68c" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "d72c" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "d7dc" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "dbbc" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "dc5c" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "debc" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "6a3c" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "e484" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Air Throw",
+    "hits" : [ "e59c" ],
+    "command" : "jLP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Medium Kick",
+    "hits" : [ "c3b4" ],
+    "command" : "6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Back Medium Punch",
+    "hits" : [ "b8bc", "b8bc" ],
+    "command" : "4MP",
+    "type" : 1
+  },
+  {
+    "name" : "Back Heavy Punch",
+    "hits" : [ "bc6c" ],
+    "command" : "4HP",
+    "type" : 1
+  },
+  {
+    "name" : "Jumping Down Medium Kick",
+    "hits" : [ "dd4c" ],
+    "command" : "j2MK",
+    "type" : 1
+  },
+  {
+    "name" : "Jumping Down Heavy Punch",
+    "hits" : [ "da2c" ],
+    "command" : "j2HP",
+    "type" : 1
+  },
+  {
+    "name" : "Kikkoken (Light)",
+    "hits" : [ "486c" ],
+    "command" : "41236LP",
+    "type" : 2
+  },
+  {
+    "name" : "Kikkoken (Medium)",
+    "hits" : [ "4b64" ],
+    "command" : "41236MP",
+    "type" : 2
+  },
+  {
+    "name" : "Kikkoken (Heavy)",
+    "hits" : [ "4e44" ],
+    "command" : "41236HP",
+    "type" : 2
+  },
+  {
+    "name" : "Kikkoken (EX)",
+    "hits" : [ "5124" ],
+    "command" : "41236PP",
+    "type" : 2
+  },
+  {
+    "name" : "Hyakuretsu Kyaku (Light)",
+    "hits" : [ "7e5c", "7e5c", "7e5c", "7e5c", "458c" ],
+    "command" : "Mash LK",
+    "type" : 2
+  },
+  {
+    "name" : "Hyakuretsu Kyaku (Medium)",
+    "hits" : [ "7f44", "7f44", "7f44", "7f44", "4644", "4644" ],
+    "command" : "Mash MK",
+    "type" : 2
+  },
+  {
+    "name" : "Hyakuretsu Kyaku (Heavy)",
+    "hits" : [ "802c", "802c", "802c", "802c", "46fc", "46fc" ],
+    "command" : "Mash HK",
+    "type" : 2
+  },
+  {
+    "name" : "Hyakuretsu Kyaku (EX)",
+    "hits" : [ "44a4", "44a4", "44a4", "44a4" ],
+    "command" : "Mash KK",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Bird Kick (Light)",
+    "hits" : [ "2c54", "2c54", "2c54", "2c54" ],
+    "command" : "[2]8LK",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Bird Kick (Medium)",
+    "hits" : [ "2fac", "2fac", "2fac", "2fac", "2fac", "2fac" ],
+    "command" : "[2]8MK",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Bird Kick (Heavy)",
+    "hits" : [ "3334", "3334", "3334", "3334", "3334", "3334", "3334", "3334" ],
+    "command" : "[2]8HK",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Bird Kick (EX)",
+    "hits" : [ "36bc", "36bc", "36bc", "36bc", "36bc" ],
+    "command" : "[2]8KK",
+    "type" : 2
+  },
+  {
+    "name" : "Hazan Shu (Light)",
+    "hits" : [ "6aec" ],
+    "command" : "63214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Hazan Shu (Medium)",
+    "hits" : [ "6e5c" ],
+    "command" : "63214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Hazan Shu (Heavy)",
+    "hits" : [ "71cc" ],
+    "command" : "63214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Hazan Shu (EX)",
+    "hits" : [ "753c" ],
+    "command" : "63214KK",
+    "type" : 2
+  },
+  {
+    "name" : "Kikoshou",
+    "hits" : [ "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434", "5434" ],
+    "command" : "236236P",
+    "type" : 3
+  },
+  {
+    "name" : "Houyoku Sen",
+    "hits" : [ "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54", "5f54" ],
+    "command" : "236236K",
+    "type" : 3
+  },
+  {
+    "name" : "Tensei Ranka",
+    "hits" : [ "669c", "669c", "669c", "669c", "669c", "669c", "669c", "669c", "669c" ],
+    "command" : "236236K",
+    "type" : 3
+  }
+]

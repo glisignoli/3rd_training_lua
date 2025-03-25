@@ -1,0 +1,344 @@
+[
+  {
+    "name" : "Light Punch",
+    "hits" : [ "a520" ],
+    "command" : "5LP",
+    "type" : 0
+  },
+  {
+    "name" : "Medium Punch",
+    "hits" : [ "a978", "a978" ],
+    "command" : "5MP",
+    "type" : 0
+  },
+  {
+    "name" : "Heavy Punch",
+    "hits" : [ "ae18" ],
+    "command" : "5HP",
+    "type" : 0
+  },
+  {
+    "name" : "Light Kick",
+    "hits" : [ "b0f8" ],
+    "command" : "5LK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Medium Kick",
+    "hits" : [ "b228" ],
+    "command" : "5MK",
+    "type" : 0
+  },  
+  {
+    "name" : "Heavy Kick",
+    "hits" : [ "b560" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Heavy Kick (Target)",
+    "hits" : [ "e370" ],
+    "command" : "5HK",
+    "type" : 0
+  }, 
+  {
+    "name" : "Crouching Light Punch",
+    "hits" : [ "b940" ],
+    "command" : "2LP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Punch",
+    "hits" : [ "ba30" ],
+    "command" : "2MP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Punch",
+    "hits" : [ "bb60" ],
+    "command" : "2HP",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Light Kick",
+    "hits" : [ "bde0" ],
+    "command" : "2LK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Medium Kick",
+    "hits" : [ "bf88" ],
+    "command" : "2MK",
+    "type" : 0
+  },
+  {
+    "name" : "Crouching Heavy Kick",
+    "hits" : [ "c1d8" ],
+    "command" : "2HK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Punch",
+    "hits" : [ "c690" ],
+    "command" : "njLP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Punch",
+    "hits" : [ "c820" ],
+    "command" : "njMP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Punch",
+    "hits" : [ "c9e0" ],
+    "command" : "njHP",
+    "type" : 0
+  },
+  {
+    "name" : "nj Light Kick",
+    "hits" : [ "cba0" ],
+    "command" : "njLK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Medium Kick",
+    "hits" : [ "cd30" ],
+    "command" : "njMK",
+    "type" : 0
+  },
+  {
+    "name" : "nj Heavy Kick",
+    "hits" : [ "cef0", "cef0" ],
+    "command" : "njHK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Punch",
+    "hits" : [ "d0f8" ],
+    "command" : "jLP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Punch",
+    "hits" : [ "d288" ],
+    "command" : "jMP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch",
+    "hits" : [ "d448" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Punch (Target)",
+    "hits" : [ "e1f8" ],
+    "command" : "jHP",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Light Kick",
+    "hits" : [ "d608" ],
+    "command" : "jLK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick",
+    "hits" : [ "d798" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Medium Kick (Target)",
+    "hits" : [ "e068" ],
+    "command" : "jMK",
+    "type" : 0
+  },
+  {
+    "name" : "Jumping Heavy Kick",
+    "hits" : [ "d958", "d958" ],
+    "command" : "jHK",
+    "type" : 0
+  },
+  {
+    "name" : "Universal Overhead",
+    "hits" : [ "6354" ],
+    "command" : "MP+MK",
+    "type" : 0
+  },
+  {
+    "name" : "Throw",
+    "hits" : [ "df50" ],
+    "command" : "LP+LK",
+    "type" : 0
+  },
+  {
+    "name" : "Personal Action",
+    "hits" : [ "63d4", "63d4" ],
+    "command" : "HP+HK",
+    "type" : 0
+  },
+  {
+    "name" : "Forward Medium Kick",
+    "hits" : [ "b430" ],
+    "command" : "6MK",
+    "type" : 1
+  },
+  {
+    "name" : "Forward Medium Punch",
+    "hits" : [ "ab98" ],
+    "command" : "6MP",
+    "type" : 1
+  },
+  {
+    "name" : "Back Heavy Kick",
+    "hits" : [ "b7e0" ],
+    "command" : "4HK",
+    "type" : 1
+  },
+  {
+    "name" : "Down-Back Heavy Kick",
+    "hits" : [ "c440" ],
+    "command" : "3HK",
+    "type" : 1
+  },
+  {
+    "name" : "Down Heavy Punch",
+    "hits" : [ "e620" ],
+    "command" : "2HP",
+    "type" : 1
+  },
+  {
+    "name" : "Scratch Wheel (Light)",
+    "hits" : [ "321c" ],
+    "command" : "623LK",
+    "type" : 2
+  },
+  {
+    "name" : "Scratch Wheel (Medium)",
+    "hits" : [ "333c", "333c" ],
+    "command" : "623MK",
+    "type" : 2
+  },
+  {
+    "name" : "Scratch Wheel (Heavy)",
+    "hits" : [ "345c", "345c", "345c" ],
+    "command" : "623HK",
+    "type" : 2
+  },
+  {
+    "name" : "Scratch Wheel (EX)",
+    "hits" : [ "358c" ],
+    "command" : "623KK",
+    "type" : 2
+  },
+  {
+    "name" : "Rhino Horn (Light)",
+    "hits" : [ "36cc", "36cc" ],
+    "command" : "41236LK",
+    "type" : 2
+  },
+  {
+    "name" : "Rhino Horn (Medium)",
+    "hits" : [ "3a54", "3a54" ],
+    "command" : "41236MK",
+    "type" : 2
+  },
+  {
+    "name" : "Rhino Horn (Heavy)",
+    "hits" : [ "3dc4", "3dc4" ],
+    "command" : "41236HK",
+    "type" : 2
+  },
+  {
+    "name" : "Rhino Horn (EX)",
+    "hits" : [ "4134", "4134", "4134" ],
+    "command" : "41236KK",
+    "type" : 2
+  },
+  {
+    "name" : "Mallet Smash (Light)",
+    "hits" : [ "094c", "094c" ],
+    "command" : "63214LP",
+    "type" : 2
+  },
+  {
+    "name" : "Mallet Smash (Medium)",
+    "hits" : [ "0cec", "0cec" ],
+    "command" : "63214MP",
+    "type" : 2
+  },
+  {
+    "name" : "Mallet Smash (Heavy)",
+    "hits" : [ "0eac", "0eac" ],
+    "command" : "63214HP",
+    "type" : 2
+  },
+  {
+    "name" : "Mallet Smash (EX)",
+    "hits" : [ "fde4", "fde4" ],
+    "command" : "63214PP",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Scythe (Light)",
+    "hits" : [ "681c", "681c" ],
+    "command" : "214LK",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Scythe (Medium)",
+    "hits" : [ "6e14", "6e14" ],
+    "command" : "214MK",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Scythe (Heavy)",
+    "hits" : [ "740c", "740c" ],
+    "command" : "214HK",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Scythe (EX)",
+    "hits" : [ "7a04", "7a04", "7a04", "8074" ],
+    "command" : "214KK",
+    "type" : 2
+  },
+  {
+    "name" : "Lynx Tail (Light)",
+    "hits" : [ "83cc" ],
+    "command" : "421LK",
+    "type" : 2
+  },
+  {
+    "name" : "Lynx Tail (Medium)",
+    "hits" : [ "858c", "858c" ],
+    "command" : "421MK",
+    "type" : 2
+  },
+  {
+    "name" : "Lynx Tail (Heavy)",
+    "hits" : [ "874c", "874c", "874c", "874c" ],
+    "command" : "421HK",
+    "type" : 2
+  },
+  {
+    "name" : "Lynx Tail (EX)",
+    "hits" : [ "89fc", "89fc", "89fc", "89fc", "89fc" ],
+    "command" : "421KK",
+    "type" : 2
+  },
+  {
+    "name" : "Spinning Beat",
+    "hits" : [ "485c", "485c", "485c", "485c", "485c", "485c", "485c" ],
+    "command" : "236236K",
+    "type" : 3
+  },
+  {
+    "name" : "Brave Dance",
+    "hits" : [ "4dc4", "4dc4", "4dc4", "5074", "5074", "5074", "5074", "5074", "5074", "5074" ],
+    "command" : "236236K",
+    "type" : 3
+  }
+]
