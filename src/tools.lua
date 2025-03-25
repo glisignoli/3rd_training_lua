@@ -1,4 +1,4 @@
-assert_enabled = assert_enabled or false
+assert_enabled = developer_mode
 function t_assert(_condition, _msg)
   if assert_enabled and not _condition then
     _msg = _msg or "Assertion failed"
@@ -428,8 +428,4 @@ function log_state(_obj, _names)
     end
   end
   print(_str)
-end
-
-function dbprint(_param) --good ol print statements. nothing beats that
-  print(_param)
 end
