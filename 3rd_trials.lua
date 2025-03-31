@@ -1,9 +1,9 @@
 require("src/startup")
 
 print("-----------------------------")
-print("  3rd_trials.lua - "..script_version.."")
-print("  Trials script for "..game_name.."")
-print("  Last tested Fightcade version: "..fc_version.."")
+print("  3rd_trials.lua - " .. script_version .. "")
+print("  Trials script for " .. game_name .. "")
+print("  Last tested Fightcade version: " .. fc_version .. "")
 print("  project url: https://github.com/Grouflon/3rd_training_lua")
 print("-----------------------------")
 print("WIP")
@@ -15,12 +15,13 @@ print("- Lua Hotkey 3 (alt+3) Play the current trial demo")
 print("- Lua Hotkey 4 (alt+4) Save the current trial to the saved/trials folder")
 print("- Lua Hotkey 5 (alt+5) Reset the current trial")
 print("")
-print("You can use the coin button to record your own trials. If you want to add your trial to the base list, you have to save it to the temp folder, and then copy it to data/{rom}/trials/base/{character}")
+print(
+"You can use the coin button to record your own trials. If you want to add your trial to the base list, you have to save it to the temp folder, and then copy it to data/{rom}/trials/base/{character}")
 
 print("")
 
 assert_enabled = true
-developer_mode = false
+developer_mode = true
 
 require("src/tools")
 require("src/memory_adresses")
@@ -33,8 +34,10 @@ require("src/display")
 require("src/menu_widgets")
 
 -- TRIALS
+-- Modify the table to read the json file add the metadata to the table
 function load_trials_list()
   local _trials = {}
+  local _trial_details = {}
   local _base_path = "data/sfiii3nr1/trials/base"
   for _i, _char_str in ipairs(characters) do
     local _char_path = string.format("%s/%s", _base_path, _char_str)
@@ -43,12 +46,54 @@ function load_trials_list()
     local _trials_list = list_directory_content(_char_path)
     for __, _path in ipairs(_trials_list) do
       table.insert(_trials, string.format("%s/%s", _char_path, _path))
+
+      -- Check to see if there is a data.json file
+      local _char_trial_data_json = {}
+      local f=io.open(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path), "r")
+      if file_exists(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)) then
+        local _trial_data = read_object_from_json_file(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path))
+        -- Check that data.json is valid
+        if validate_trial_data(_trial_data) then
+          print(string.format("Loaded trial data \"%s/%s/%s\"",_base_path, _char_str, _path))
+        else
+          print(string.format("Failed to load trial data \"%s/%s/%s\"",_base_path, _char_str, _path))
+        end
+      else
+        print(string.format("Can't open trial: missing data.json: \"%s\"", string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)))
+      end
+      
       if developer_mode then
         print(_path)
       end
     end
   end
   return _trials
+end
+
+function validate_trial_data(trial_data)
+  -- Make sure the trial data contaiins the following keys:
+  -- char, version, p1_sequence, hits, trial_name, trial_description
+  local _required_keys = {
+    "char",
+    "version",
+    "p1_sequence",
+    "hits",
+    "trial_name",
+    "trial_description"
+  }
+  for _i, _key in ipairs(_required_keys) do
+    if trial_data[_key] == nil then
+      print(string.format("Missing key \"%s\" in trial data", _key))
+      return false
+    end
+  end
+  return true
+end
+
+
+function file_exists(file_path)
+  local f=io.open(file_path,"r")
+  if f~=nil then io.close(f) return true else return false end
 end
 
 function load_trial_definition(_path)
@@ -106,7 +151,6 @@ function update_trial_watch(_trial_watch, _attacker, _defender)
     table.insert(_trial_watch.hits, _attacker.animation)
   end
 end
-
 
 -- STEPS
 function build_trial_steps(_char_moves, _hits)
@@ -166,7 +210,7 @@ end
 -- RECORDING
 function init_trial_recording(_trial_recording)
   local _object = _trial_recording or {}
-  
+
   _object.on = false
   _object.char_str = ""
   _object.savestate = nil
@@ -262,7 +306,6 @@ function on_start()
 end
 
 function before_frame()
-
   -- INPUT
   local _input = joypad.get()
 
@@ -317,10 +360,10 @@ function before_frame()
 
   -- trial CHECK
   local function switch_trial(_index)
-    local _list_size = #trials_list 
+    local _list_size = #trials_list
     while (_index < 1) do
       _index = _index + _list_size
-    end      
+    end
     _index = ((_index - 1) % _list_size) + 1
     current_trial = _index
     local _trial_definition = load_trial_definition(trials_list[current_trial])
@@ -345,6 +388,49 @@ function before_frame()
       stage_trial(_trial_definition)
     end
   end
+
+  if P1.input.pressed["start"] then
+    -- Bring up trials menu
+    if is_menu_open then
+      is_menu_open = false
+    else
+      -- Hide move list
+
+      menu_stack_push(main_menu)
+      is_menu_open = true
+    end
+    -- Print
+    print("Start pressed")
+  end
+
+  -- Draw Menu
+  if is_menu_open then
+    local _horizontal_autofire_rate = 4
+    local _vertical_autofire_rate = 4
+
+    local _current_entry = menu_stack_top():current_entry()
+    if _current_entry ~= nil and _current_entry.autofire_rate ~= nil then
+      _horizontal_autofire_rate = _current_entry.autofire_rate
+    end
+
+    local _input =
+    {
+      down = check_input_down_autofire(player_objects[1], "down", _vertical_autofire_rate),
+      up = check_input_down_autofire(player_objects[1], "up", _vertical_autofire_rate),
+      left = check_input_down_autofire(player_objects[1], "left", _horizontal_autofire_rate),
+      right = check_input_down_autofire(player_objects[1], "right", _horizontal_autofire_rate),
+      validate = P1.input.pressed.LP,
+      reset = P1.input.pressed.MP,
+      cancel = P1.input.pressed.LK,
+    }
+
+    menu_stack_update(_input)
+
+    menu_stack_draw()
+  end
+
+  gui.box(0, 0, 0, 0, 0, 0) -- if we don't draw something, what we drawed from last frame won't be cleared
+
 
   if hotkey3_pressed and staged_trial ~= nil then
     savestate.load(staged_trial.definition.savestate)
@@ -382,8 +468,34 @@ function before_frame()
   end
 end
 
-function on_gui()
+-- Main Menu
+-- There are some limitations with make_multitab_menu, it doesn't support
+-- a large number of horizontal tabs, so we either need to update menu_widgets
+-- to support it, or we have a tab for selecting thing character, and then
+-- another tab for the trials of that character.
+-- The tab containing the trials will need to support a large number of entries
+-- as we don't know how many trials there are for each character, so a list with
+-- an index is needed that can be scrolled up and down.
+main_menu = make_multitab_menu(
+--23, 15, 360, 195, -- screen size 383,223
+  23, 5, 360, 205,  -- screen size 383,223
+  {
+    {
+      name = "Trials1",
+      entries = {
+        -- list_menu_item("Pose", training_settings, "pose", pose),
+      }
+    },
+  },
+  function()
+    -- Empty function on menu exit
+  end,
+  function(_menu)
+    -- Empty function for additional draw
+  end
+)
 
+function on_gui()
   local _max_hit = 0
   if not trial_recording.on then
     for _i = 1, #staged_trial.watch.hits do
@@ -400,24 +512,27 @@ function on_gui()
   local _steps = nil
   if trial_recording.on then
     _steps = trial_recording.steps
-  elseif staged_trial ~= nil then 
+  elseif staged_trial ~= nil then
     _steps = staged_trial.steps
   end
 
   if _steps ~= nil then
+    -- If menu is open, then hide steps
+    if not is_menu_open then
       draw_trial_steps(_x, _y, _steps, _max_hit)
+    end
   end
 
   -- RECORDING
   if trial_recording.on then
-      gui.text(5, 5, "Recording trial...")
+    gui.text(5, 5, "Recording trial...")
   end
 
   if is_playing_demo then
-      gui.text(5, 5, "Demo...")
+    gui.text(5, 5, "Demo...")
   end
 
-  gui.box(0,0,0,0,0,0) -- if we don't draw something, what we drawed from last frame won't be cleared
+  gui.box(0, 0, 0, 0, 0, 0) -- if we don't draw something, what we drawed from last frame won't be cleared
 
   -- clear input state
   hotkey1_pressed = false
@@ -435,15 +550,19 @@ gui.register(on_gui)
 function hotkey1()
   hotkey1_pressed = true
 end
+
 function hotkey2()
   hotkey2_pressed = true
 end
+
 function hotkey3()
   hotkey3_pressed = true
 end
+
 function hotkey4()
   hotkey4_pressed = true
 end
+
 function hotkey5()
   hotkey5_pressed = true
 end
