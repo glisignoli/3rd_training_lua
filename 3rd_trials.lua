@@ -41,6 +41,7 @@ function load_trials_list()
   local _base_path = "data/sfiii3nr1/trials/base"
   for _i, _char_str in ipairs(characters) do
     local _char_path = string.format("%s/%s", _base_path, _char_str)
+    local _all_char_trials = {}
 
     --print (_char_path)
     local _trials_list = list_directory_content(_char_path)
@@ -52,12 +53,15 @@ function load_trials_list()
       local f=io.open(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path), "r")
       if file_exists(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)) then
         local _trial_data = read_object_from_json_file(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path))
+        
         -- Check that data.json is valid
         if validate_trial_data(_trial_data) then
-          print(string.format("Loaded trial data \"%s/%s/%s\"",_base_path, _char_str, _path))
+          -- Since the trial data is valid, we can add it to _trial_details
+          table.insert(_all_char_trials, _trial_data)
         else
           print(string.format("Failed to load trial data \"%s/%s/%s\"",_base_path, _char_str, _path))
         end
+
       else
         print(string.format("Can't open trial: missing data.json: \"%s\"", string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)))
       end
@@ -65,6 +69,21 @@ function load_trials_list()
       if developer_mode then
         print(_path)
       end
+    end
+    -- Add all the character trials to _trial_details, unsure if this is working
+    _trial_details[_char_str] = _all_char_trials
+  end
+  if developer_mode then
+    for k, v in pairs(_trial_details) do
+        print(string.format("Trials for %s: ", k))
+        for _i, trial in ipairs(v) do
+          print(string.format("  %s", trial.trial_name))
+          print(string.format("  %s", trial.trial_description))
+          print(string.format("  %s", trial.char))
+          print(string.format("  %s", trial.version))
+          -- Table print(string.format("  %s", trial.p1_sequence))
+          -- Table print(string.format("  %s", trial.hits))
+        end
     end
   end
   return _trials
