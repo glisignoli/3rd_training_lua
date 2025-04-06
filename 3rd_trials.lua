@@ -35,8 +35,42 @@ require("src/menu_widgets")
 
 -- TRIALS
 -- Modify the table to read the json file add the metadata to the table
-function load_trials_list()
-  local _trials = {}
+-- trial_details are in the following format:
+--- _trial_details = {
+---   [1] = {
+---     [1] = {
+---       trial_name = "Trial 1",
+---       trial_description = "Trial 1 description",
+---       char = "Ryu",
+---       version = 1,
+---       p1_sequence = {1, 2, 3},
+---       hits = {1, 2, 3},
+---     },
+---     [2] = {
+---       trial_name = "Trial 2",
+---       trial_description = "Trial 2 description",
+---       char = "Ryu",
+---       version = 1,
+---       p1_sequence = {1, 2, 3},
+---       hits = {1, 2, 3},
+---     },
+---     [3] = {...}
+---   },
+---   [2] = {
+---     [1] = {
+---       trial_name = "Trial 1",
+---       trial_description = "Trial 1 description",
+---       char = "Ken",
+---       version = 1,
+---       p1_sequence = {1, 2, 3},
+---       hits = {1, 2, 3},
+---     },
+---     [2] = {...}
+---   },
+--- }
+function load_trials_list(load_trial_details)
+  local _load_trial_details = load_trial_details or false
+  local _trials = {} -- Old list of trials
   local _trial_details = {}
   local _base_path = "data/sfiii3nr1/trials/base"
   for _i, _char_str in ipairs(characters) do
@@ -48,22 +82,24 @@ function load_trials_list()
     for __, _path in ipairs(_trials_list) do
       table.insert(_trials, string.format("%s/%s", _char_path, _path))
 
-      -- Check to see if there is a data.json file
-      local _char_trial_data_json = {}
-      local f=io.open(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path), "r")
-      if file_exists(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)) then
-        local _trial_data = read_object_from_json_file(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path))
-        
-        -- Check that data.json is valid
-        if validate_trial_data(_trial_data) then
-          -- Since the trial data is valid, we can add it to _trial_details
-          table.insert(_all_char_trials, _trial_data)
-        else
-          print(string.format("Failed to load trial data \"%s/%s/%s\"",_base_path, _char_str, _path))
-        end
+      if _load_trial_details then
+        -- Check to see if there is a data.json file
+        local _char_trial_data_json = {}
+        local f=io.open(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path), "r")
+        if file_exists(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)) then
+          local _trial_data = read_object_from_json_file(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path))
+          
+          -- Check that data.json is valid
+          if validate_trial_data(_trial_data) then
+            -- Since the trial data is valid, we can add it to _trial_details
+            table.insert(_all_char_trials, _trial_data)
+          else
+            print(string.format("Failed to load trial data \"%s/%s/%s\"",_base_path, _char_str, _path))
+          end
 
-      else
-        print(string.format("Can't open trial: missing data.json: \"%s\"", string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)))
+        else
+          print(string.format("Can't open trial: missing data.json: \"%s\"", string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)))
+        end
       end
       
       if developer_mode then
@@ -71,27 +107,29 @@ function load_trials_list()
       end
     end
     -- Add all the character trials to _trial_details, unsure if this is working
-    _trial_details[_char_str] = _all_char_trials
+    if _load_trial_details then
+      _trial_details[_i] = _all_char_trials
+    end
   end
-  if developer_mode then
-    for k, v in pairs(_trial_details) do
-        print(string.format("Trials for %s: ", k))
-        for _i, trial in ipairs(v) do
-          print(string.format("  %s", trial.trial_name))
-          print(string.format("  %s", trial.trial_description))
-          print(string.format("  %s", trial.char))
-          print(string.format("  %s", trial.version))
+  if developer_mode and _load_trial_details then
+    for char_id, trials in ipairs(_trial_details) do
+        print(string.format("Trials for character id:char: "..char_id..":"..characters[char_id]))
+        for _i, trial in ipairs(trials) do
+          print(string.format("  trial_name: "..trial.trial_name))
+          print(string.format("  trial_description: "..trial.trial_description))
+          print(string.format("  trial_char: "..trial.char))
+          print(string.format("  trial_version: %s", trial.version))
           -- Table print(string.format("  %s", trial.p1_sequence))
           -- Table print(string.format("  %s", trial.hits))
         end
     end
   end
-  return _trials
+  return _trials, _trial_details
 end
 
+-- Make sure the trial data contaiins the following keys:
+-- char, version, p1_sequence, hits, trial_name, trial_description
 function validate_trial_data(trial_data)
-  -- Make sure the trial data contaiins the following keys:
-  -- char, version, p1_sequence, hits, trial_name, trial_description
   local _required_keys = {
     "char",
     "version",
@@ -109,7 +147,8 @@ function validate_trial_data(trial_data)
   return true
 end
 
-
+-- Ensure the file 'file_path' exists
+-- Returns true if the file exists, false otherwise
 function file_exists(file_path)
   local f=io.open(file_path,"r")
   if f~=nil then io.close(f) return true else return false end
@@ -302,7 +341,7 @@ end
 -- EMU
 moves = load_move_data()
 
-trials_list = load_trials_list()
+trials_list, trial_details= load_trials_list(true)
 current_trial = 1
 
 trial_recording = init_trial_recording()
@@ -334,6 +373,7 @@ function before_frame()
   -- WRITE GAME STATE
   local _write_game_vars_settings =
   {
+    freeze = is_menu_open, --Pause game when menu is open
     infinite_time = true,
     music_volume = 0,
   }
@@ -487,14 +527,12 @@ function before_frame()
   end
 end
 
+trial_settings = {
+  character_selected = 1, --First character is default
+  character_trial_selected = 1 --First trial is default
+}
+
 -- Main Menu
--- There are some limitations with make_multitab_menu, it doesn't support
--- a large number of horizontal tabs, so we either need to update menu_widgets
--- to support it, or we have a tab for selecting thing character, and then
--- another tab for the trials of that character.
--- The tab containing the trials will need to support a large number of entries
--- as we don't know how many trials there are for each character, so a list with
--- an index is needed that can be scrolled up and down.
 main_menu = make_multitab_menu(
 --23, 15, 360, 195, -- screen size 383,223
   23, 5, 360, 205,  -- screen size 383,223
@@ -502,7 +540,8 @@ main_menu = make_multitab_menu(
     {
       name = "Trials1",
       entries = {
-        -- list_menu_item("Pose", training_settings, "pose", pose),
+        list_menu_item("Character", trial_settings, "character_selected", characters, 1, "character_trial_selected"),
+        sub_list_menu_item("Trial", trial_settings, "character_trial_selected", trial_details, "character_selected", "trial_name"),
       }
     },
   },
