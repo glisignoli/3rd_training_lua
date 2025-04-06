@@ -321,7 +321,7 @@ function checkbox_menu_item(_name, _object, _property_name, _default_value)
   return _o
 end
 
-function list_menu_item(_name, _object, _property_name, _list, _default_value)
+function list_menu_item(_name, _object, _property_name, _list, _default_value, _sub_list_property_to_reset)
   if _default_value == nil then _default_value = 1 end
   local _o = {}
   _o.name = _name
@@ -329,6 +329,7 @@ function list_menu_item(_name, _object, _property_name, _list, _default_value)
   _o.property_name = _property_name
   _o.list = _list
   _o.default_value = _default_value
+  _o.sub_list_property_to_reset = _sub_list_property_to_reset
 
   function _o:draw(_x, _y, _selected)
     local _c = text_default_color
@@ -343,6 +344,9 @@ function list_menu_item(_name, _object, _property_name, _list, _default_value)
   end
 
   function _o:left()
+    if self.sub_list_property_to_reset then
+      self.object[self.sub_list_property_to_reset] = 1
+    end
     self.object[self.property_name] = self.object[self.property_name] - 1
     if self.object[self.property_name] == 0 then
       self.object[self.property_name] = #self.list
@@ -350,8 +354,81 @@ function list_menu_item(_name, _object, _property_name, _list, _default_value)
   end
 
   function _o:right()
+    if self.sub_list_property_to_reset then
+      self.object[self.sub_list_property_to_reset] = 1
+    end
     self.object[self.property_name] = self.object[self.property_name] + 1
     if self.object[self.property_name] > #self.list then
+      self.object[self.property_name] = 1
+    end
+  end
+
+  function _o:reset()
+    self.object[self.property_name] = self.default_value
+  end
+
+  function _o:legend()
+    return "MP: Reset to default"
+  end
+
+  return _o
+end
+
+--- This menu item is used to extract a 'sublist' from a table of values.
+--- It takes a input table, and index value, and a property name to display.
+--- It will will display the value of the property and store the index of the subtable
+--- }}
+--- 
+--- @param _name string: The name of the menu item, eg: 'Character'
+--- @param _object table: The table that stores the properties, eg: 'trial_settings'
+--- @param _property_name string: The property to modify in the object, eg: 'sublist_index'
+--- @param _sub_list table: The sublist that will be to lookup the sub_list_property, eg: trial_data
+--- @param _sub_list_index_name string: The property to use for the sub_list index, eg: 'character_selected'
+--- @param _sub_list_property string: The property to display in the sublist, eg: 'char'
+--- @param _default_value? integer: The default index of the sublist to look at, eg: 1
+function sub_list_menu_item(_name, _object, _property_name, _sub_list, _sub_list_index_name, _sub_list_property, _default_value)
+  if _default_value == nil then _default_value = 1 end
+  local _o = {}
+  _o.name = _name
+  _o.object = _object
+  _o.property_name = _property_name
+  _o.sub_list = _sub_list
+  _o.sub_list_index_name = _sub_list_index_name
+  _o.sub_list_property = _sub_list_property
+  _o.default_value = _default_value
+
+  function _o:draw(_x, _y, _selected)
+    local _c = text_default_color
+    local _prefix = ""
+    local _suffix = ""
+    if _selected then
+      _c = text_selected_color
+      _prefix = "< "
+      _suffix = " >"
+    end
+    if developer_mode then
+      print("sub_list: _name: "..self.name)
+      print("sub_list: _property_name: "..self.property_name)
+      print("sub_list: _property_value: "..tostring(self.object[self.property_name]))
+      print("sub_list: _sub_list_index:"..tostring(self.object[self.sub_list_index_name]))
+      print("sub_list: _sub_list_property:"..self.sub_list_property)
+      print("sub_list: _sub_list_value:"..tostring(self.sub_list[self.object[self.sub_list_index_name]][self.object[self.property_name]][self.sub_list_property]))
+
+    end
+
+    gui.text(_x, _y, _prefix..self.name.." : "..self.sub_list[self.object[self.sub_list_index_name]][self.object[self.property_name]][self.sub_list_property].._suffix, _c, text_default_border_color)
+  end
+
+  function _o:left()
+    self.object[self.property_name] = self.object[self.property_name] - 1
+    if self.object[self.property_name] == 0 then
+      self.object[self.property_name] = #self.sub_list[self.object[self.sub_list_index_name]]
+    end
+  end
+
+  function _o:right()
+    self.object[self.property_name] = self.object[self.property_name] + 1
+    if self.object[self.property_name] > #self.sub_list[self.object[self.sub_list_index_name]] then
       self.object[self.property_name] = 1
     end
   end
