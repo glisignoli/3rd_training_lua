@@ -538,10 +538,13 @@ main_menu = make_multitab_menu(
   23, 5, 360, 205,  -- screen size 383,223
   {
     {
-      name = "Trials1",
+      name = "Trials",
       entries = {
         list_menu_item("Character", trial_settings, "character_selected", characters, 1, "character_trial_selected"),
         sub_list_menu_item("Trial", trial_settings, "character_trial_selected", trial_details, "character_selected", "trial_name"),
+        button_menu_item("Load Trial", load_trial),
+        empty_menu_item(),
+        sub_text_menu_item("Description", trial_settings, "character_selected", "character_trial_selected", trial_details, "trial_description"),
       }
     },
   },
