@@ -85,20 +85,20 @@ function process_input_sequence(_player_obj, _sequence, _input, _disable_replay_
 
       --Special flags for replays
       if string.sub(_current_frame_input[i], 1, 2) == "rh" then --random hold; holds current frame for an additional 0-x frames
-        if not training_settings.replay_pause_enabled then --first frame of random hold sequence
-          training_settings.replay_pause_enabled = true
-          training_settings.replay_random_hold_time_remaining = math.random(0, tonumber(string.sub(_current_frame_input[i], 3)))
+        if not trial_settings.replay_pause_enabled then --first frame of random hold sequence
+          trial_settings.replay_pause_enabled = true
+          trial_settings.replay_random_hold_time_remaining = math.random(0, tonumber(string.sub(_current_frame_input[i], 3)))
         end
-        if training_settings.replay_random_hold_time_remaining == 0 then --last frame of the random hold sequence
-          training_settings.replay_pause_enabled = false
+        if trial_settings.replay_random_hold_time_remaining == 0 then --last frame of the random hold sequence
+          trial_settings.replay_pause_enabled = false
         else
-          training_settings.replay_random_hold_time_remaining = training_settings.replay_random_hold_time_remaining - 1
+          trial_settings.replay_random_hold_time_remaining = trial_settings.replay_random_hold_time_remaining - 1
         end
       elseif string.sub(_current_frame_input[i], 1, 2) == "ol" then --on land; holds current frame landing
         if dummy.pos_y == 0 then 
-          training_settings.replay_pause_enabled = false
+          trial_settings.replay_pause_enabled = false
         else 
-          training_settings.replay_pause_enabled = true
+          trial_settings.replay_pause_enabled = true
         end
 
       elseif _current_frame_input[i] == "forward" then
@@ -157,7 +157,7 @@ function process_input_sequence(_player_obj, _sequence, _input, _disable_replay_
   end
   --print(_s)
 
-  if not training_settings.replay_pause_enabled then
+  if not trial_settings.replay_pause_enabled then
     _sequence.current_frame = _sequence.current_frame + 1
   end
 end
