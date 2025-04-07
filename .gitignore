@@ -5,8 +5,5 @@ saved/trials/**.*
 !saved/recordings/A_Guard_Jump_Forward.json
 !saved/recordings/A_Guard_Jump_Neutral.json
 *.sublime-*
-mame
-RomhackerHelper1_0.lua
 updates
 crystal_cube
-data/sfiii3nr1/trials
