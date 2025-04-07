@@ -527,12 +527,26 @@ function before_frame()
   end
 end
 
+-- TODO: Play demo doesn't work
+function play_demo()
+  load_trial()
+  is_menu_open = false
+  update_trial_watch(staged_trial.watch, player_objects[1], player_objects[2])
+end
+
+function load_trial()
+  local _path_to_trial = "data/sfiii3nr1/trials/base/" .. characters[trial_settings.character_selected] .. "/" .. trial_details[trial_settings.character_selected][trial_settings.character_trial_selected].trial_name
+  local _trial_definition = load_trial_definition(_path_to_trial)
+  stage_trial(_trial_definition)
+end
+
 trial_settings = {
   character_selected = 1, --First character is default
   character_trial_selected = 1 --First trial is default
 }
 
 -- Main Menu
+-- TODO: Button presses in menu (play demo, load trial) cause characters to attack when resumeing game
 main_menu = make_multitab_menu(
 --23, 15, 360, 195, -- screen size 383,223
   23, 5, 360, 205,  -- screen size 383,223
@@ -543,6 +557,7 @@ main_menu = make_multitab_menu(
         list_menu_item("Character", trial_settings, "character_selected", characters, 1, "character_trial_selected"),
         sub_list_menu_item("Trial", trial_settings, "character_trial_selected", trial_details, "character_selected", "trial_name"),
         button_menu_item("Load Trial", load_trial),
+        button_menu_item("Play Demo", play_demo),
         empty_menu_item(),
         sub_text_menu_item("Description", trial_settings, "character_selected", "character_trial_selected", trial_details, "trial_description"),
       }
