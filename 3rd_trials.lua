@@ -9,16 +9,10 @@ print("-----------------------------")
 print("WIP")
 --print("This is a proof of concept which has only a handful of Hugo trials")
 --print("Command List:")
-print("- Lua Hotkey 1 (alt+1) Go up the trial list")
-print("- Lua Hotkey 2 (alt+2) Go down the trial list")
-print("- Lua Hotkey 3 (alt+3) Play the current trial demo")
-print("- Lua Hotkey 4 (alt+4) Save the current trial to the saved/trials folder")
-print("- Lua Hotkey 5 (alt+5) Reset the current trial")
-print("")
-print(
-"You can use the coin button to record your own trials. If you want to add your trial to the base list, you have to save it to the temp folder, and then copy it to data/{rom}/trials/base/{character}")
+print("Command List:")
+print("- Enter training menu by pressing \"Start\" while in game")
+print("- Reset the current trial by pressing coin")
 
-print("")
 
 assert_enabled = true
 developer_mode = true
@@ -373,7 +367,7 @@ function before_frame()
   -- WRITE GAME STATE
   local _write_game_vars_settings =
   {
-    freeze = is_menu_open, --Pause game when menu is open
+    freeze = false, --is_menu_open, --Pause game when menu is open
     infinite_time = true,
     music_volume = 0,
   }
@@ -428,25 +422,23 @@ function before_frame()
     local _trial_definition = load_trial_definition(trials_list[current_trial])
     stage_trial(_trial_definition)
   end
-  if hotkey1_pressed then
-    switch_trial(current_trial - 1)
-  elseif hotkey2_pressed then
-    switch_trial(current_trial + 1)
-  elseif hotkey5_pressed then
+
+  -- Reset trial
+  if P1.input.pressed["coin"] then
     switch_trial(current_trial)
   end
 
-  -- RECORDING
-  if P1.input.pressed["coin"] then
-    if not trial_recording.on then
-      start_trial_recording(trial_recording)
-    else
-      --stop_trial_recording(trial_recording)
-      --init_trial_watch(trial_watch)
-      local _trial_definition = stop_trial_recording(trial_recording)
-      stage_trial(_trial_definition)
-    end
-  end
+  -- -- RECORDING
+  -- if P1.input.pressed["coin"] then
+  --   if not trial_recording.on then
+  --     start_trial_recording(trial_recording)
+  --   else
+  --     --stop_trial_recording(trial_recording)
+  --     --init_trial_watch(trial_watch)
+  --     local _trial_definition = stop_trial_recording(trial_recording)
+  --     stage_trial(_trial_definition)
+  --   end
+  -- end
 
   if P1.input.pressed["start"] then
     -- Bring up trials menu
@@ -454,12 +446,9 @@ function before_frame()
       is_menu_open = false
     else
       -- Hide move list
-
       menu_stack_push(main_menu)
       is_menu_open = true
     end
-    -- Print
-    print("Start pressed")
   end
 
   -- Draw Menu
@@ -490,17 +479,6 @@ function before_frame()
 
   gui.box(0, 0, 0, 0, 0, 0) -- if we don't draw something, what we drawed from last frame won't be cleared
 
-
-  if hotkey3_pressed and staged_trial ~= nil then
-    savestate.load(staged_trial.definition.savestate)
-    staged_trial.sequence = {
-      current_frame = 1,
-      sequence = staged_trial.definition.data.p1_sequence
-    }
-    is_playing_demo = true
-    init_trial_watch(staged_trial.watch)
-  end
-
   -- WATCH
   if trial_recording.on then
     update_trial_watch(trial_recording.watch, player_objects[1], player_objects[2])
@@ -512,7 +490,7 @@ function before_frame()
 
   -- DEMO
   if is_playing_demo then
-    process_input_sequence(player_objects[1], staged_trial.sequence, _input)
+    process_input_sequence(player_objects[1], staged_trial.sequence, _input, false)
     joypad.set(_input)
 
     if staged_trial.sequence.current_frame > #staged_trial.sequence.sequence then
@@ -531,7 +509,13 @@ end
 function play_demo()
   load_trial()
   is_menu_open = false
-  update_trial_watch(staged_trial.watch, player_objects[1], player_objects[2])
+  savestate.load(staged_trial.definition.savestate)
+  staged_trial.sequence = {
+    current_frame = 1,
+    sequence = staged_trial.definition.data.p1_sequence
+  }
+  is_playing_demo = true
+  init_trial_watch(staged_trial.watch)
 end
 
 function load_trial()
@@ -542,7 +526,9 @@ end
 
 trial_settings = {
   character_selected = 1, --First character is default
-  character_trial_selected = 1 --First trial is default
+  character_trial_selected = 1, --First trial is default
+  replay_pause_enabled = false,
+  replay_random_hold_time_remaining = 0,
 }
 
 -- Main Menu
@@ -621,30 +607,3 @@ end
 emu.registerstart(on_start)
 emu.registerbefore(before_frame)
 gui.register(on_gui)
-
-
-function hotkey1()
-  hotkey1_pressed = true
-end
-
-function hotkey2()
-  hotkey2_pressed = true
-end
-
-function hotkey3()
-  hotkey3_pressed = true
-end
-
-function hotkey4()
-  hotkey4_pressed = true
-end
-
-function hotkey5()
-  hotkey5_pressed = true
-end
-
-input.registerhotkey(1, hotkey1)
-input.registerhotkey(2, hotkey2)
-input.registerhotkey(3, hotkey3)
-input.registerhotkey(4, hotkey4)
-input.registerhotkey(5, hotkey5)
