@@ -530,7 +530,9 @@ trial_settings = {
   character_trial_selected = 1, --First trial is default
   replay_pause_enabled = false,
   replay_random_hold_time_remaining = 0,
+  test_scrollable_list = 1
 }
+
 
 -- Main Menu
 -- TODO: Button presses in menu (play demo, load trial) cause characters to attack when resumeing game
@@ -549,6 +551,12 @@ main_menu = make_multitab_menu(
         sub_text_menu_item("Description", trial_settings, "character_selected", "character_trial_selected", trial_details, "trial_description"),
       }
     },
+    {
+      name = "Test scrollable list",
+      entries = {
+        scrollable_trial_menu(trial_settings, "test_scrollable_list", characters, 7, 1),
+      }
+    }
   },
   function()
     -- Empty function on menu exit
