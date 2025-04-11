@@ -368,7 +368,7 @@ function before_frame()
   -- WRITE GAME STATE
   local _write_game_vars_settings =
   {
-    freeze = false, --is_menu_open, --Pause game when menu is open
+    freeze = is_menu_open, --Pause game when menu is open
     infinite_time = true,
     music_volume = 0,
   }
@@ -412,21 +412,21 @@ function before_frame()
     end
   end
 
-  -- trial CHECK
-  local function switch_trial(_index)
-    local _list_size = #trials_list
-    while (_index < 1) do
-      _index = _index + _list_size
-    end
-    _index = ((_index - 1) % _list_size) + 1
-    current_trial = _index
-    local _trial_definition = load_trial_definition(trials_list[current_trial])
-    stage_trial(_trial_definition)
-  end
+  -- -- trial CHECK
+  -- local function switch_trial(_index)
+  --   local _list_size = #trials_list
+  --   while (_index < 1) do
+  --     _index = _index + _list_size
+  --   end
+  --   _index = ((_index - 1) % _list_size) + 1
+  --   current_trial = _index
+  --   local _trial_definition = load_trial_definition(trials_list[current_trial])
+  --   stage_trial(_trial_definition)
+  -- end
 
   -- Reset trial
   if P1.input.pressed["coin"] then
-    switch_trial(current_trial)
+    load_trial()
   end
 
   -- -- RECORDING
@@ -506,7 +506,6 @@ function before_frame()
   end
 end
 
--- TODO: Play demo doesn't work
 function play_demo()
   load_trial()
   is_menu_open = false
@@ -551,12 +550,12 @@ main_menu = make_multitab_menu(
         sub_text_menu_item("Description", trial_settings, "character_selected", "character_trial_selected", trial_details, "trial_description"),
       }
     },
-    {
-      name = "Test scrollable list",
-      entries = {
-        scrollable_trial_menu(trial_settings, "test_scrollable_list", characters, 7, 1),
-      }
-    }
+    -- {
+    --   name = "Test scrollable list",
+    --   entries = {
+    --     scrollable_trial_menu(trial_settings, "test_scrollable_list", characters, 7, 1),
+    --   }
+    -- }
   },
   function()
     -- Empty function on menu exit
