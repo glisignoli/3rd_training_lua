@@ -528,7 +528,7 @@ function sub_text_menu_item(_name, _object, _property_name, _sub_list_property_n
   return _o
 end
 
---- The creates an empty menu entry, used for splitting sections of the menu
+--- This creates an empty menu entry, used for splitting sections of the menu
 function empty_menu_item()
   local _o = {}
 
@@ -547,6 +547,136 @@ function empty_menu_item()
 
   function _o:legend()
     return ""
+  end
+
+  return _o
+end
+
+--- This function creates a doubly circular linked list from a table of values.
+--- 
+--- @param values table: The table of values to create the list from.
+function toDoublyCircularList(values)
+  local circular = {}
+  local n = #values
+
+  -- Create nodes
+  for i = 1, n do
+      circular[i] = {
+          value = values[i],
+          next = nil,
+          prev = nil,
+          index = i
+      }
+  end
+
+  -- Link nodes in both directions
+  for i = 1, n do
+      circular[i].next = circular[(i % n) + 1]
+      circular[i].prev = circular[(i - 2 + n) % n + 1]
+  end
+
+  local head = circular[1]
+  head._length = n -- store the size in the head for reference
+  return head
+end
+
+--- This function retrieves a node at a specific index in a doubly circular linked list.
+--- 
+--- @param head table: The head of the circular linked list.
+--- @param index integer: The index of the node to retrieve.
+function getNodeAt(head, index)
+  local len = head._length
+  if len == 0 then return nil end
+
+  -- Normalize index to 1-based circular index
+  index = ((index - 1) % len) + 1
+
+  local current = head
+  while current.index ~= index do
+      current = current.next
+  end
+  return current
+end
+
+--- This creates a scrollable menu entry, used for scrolling through a list of values.<br>
+--- For example, if _table contains 5 characters, _displayed_items is 5, and _default_value is 3, then we display:<br>
+--- 
+--- ...Character 1<br>
+--- Character 2<br>
+--- <Character 3><br>
+--- Character 4<br>
+--- Character 5...<br>
+--- 
+--- If _table contains 3 characters, and _displayed_items is 5, and _default_value is 1, then we display:
+--- 
+--- ...Character 2<br>
+--- Character 3<br>
+--- <Character 1><br>
+--- Character 2<br>
+--- Character 3...<br>
+--- 
+--- @param _object table: The table that stores the property, eg: 'trial_settings'
+--- @param _property_name string: The property that stores the current selected item, eg: 'trial_selected'
+--- @param _table table: The table that contains the list of items to display, eg: characters
+--- @param _displayed_items integer: The number of items to display in the menu, must be odd, eg: 5
+--- @param _default_value? integer: The default value to display if the property is nil, eg: 1
+function scrollable_trial_menu(_object, _property_name, _table, _displayed_items, _default_value)
+  if _default_value == nil then _default_value = 1 end
+  if (_displayed_items % 2 == 0) then
+    error("scrollable_trial_menu requires an odd number of displayed items, got ".._displayed_items)
+  end
+  local _o = {}
+  _o.object = _object
+  _o.property_name = _property_name
+  _o.table = _table
+  _o.displayed_items = _displayed_items
+  _o.default_value = _default_value
+
+  function _o:draw(_x,_y, _selected)
+    local _c = text_default_color
+    if _selected then
+      _c = text_selected_color
+    end
+
+    local _current_index = self.object[self.property_name]
+    local _middle_index = (self.displayed_items +1) / 2
+    local circular_list = toDoublyCircularList(_table)
+
+    _y = _y - menu_y_interval
+
+    for i = 1, self.displayed_items do
+      _node = getNodeAt(circular_list, _current_index - (i - _middle_index))
+      _y = _y + menu_y_interval
+      
+      if i == _middle_index then
+        gui.text(_x, _y, "<".._node.value..">", _c, text_default_border_color)
+
+      else
+        gui.text(_x, _y, _node.value, text_default_color, text_default_border_color)
+      end
+    end
+  end
+
+  function _o:left()
+    self.object[self.property_name] = self.object[self.property_name] + 1
+    if self.object[self.property_name] < 1 then
+      self.object[self.property_name] = #self.table
+    end
+  end
+
+  function _o:right()
+    self.object[self.property_name] = self.object[self.property_name] - 1
+    if self.object[self.property_name] > #self.table then
+      self.object[self.property_name] = 1
+    end
+  end
+
+  function _o:reset()
+    self.object[self.property_name] = self.default_value
+  end
+
+  function _o:legend()
+    return "MP: Reset to default"
   end
 
   return _o
