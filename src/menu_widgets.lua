@@ -531,6 +531,7 @@ end
 --- This creates an empty menu entry, used for splitting sections of the menu
 function empty_menu_item()
   local _o = {}
+  _o.empty_item = true
 
   function _o:draw(_x, _y, _selected)
     gui.text(_x, _y, "", text_default_color, text_default_border_color)
@@ -631,6 +632,8 @@ function scrollable_trial_menu(_object, _property_name, _table, _displayed_items
   _o.table = _table
   _o.displayed_items = _displayed_items
   _o.default_value = _default_value
+  _o.y_padding = (_displayed_items -1) * menu_y_interval
+
 
   function _o:draw(_x,_y, _selected)
     local _c = text_default_color
@@ -659,15 +662,90 @@ function scrollable_trial_menu(_object, _property_name, _table, _displayed_items
 
   function _o:left()
     self.object[self.property_name] = self.object[self.property_name] + 1
-    if self.object[self.property_name] < 1 then
-      self.object[self.property_name] = #self.table
+    if self.object[self.property_name] > #self.table then
+      self.object[self.property_name] = 1
     end
   end
 
   function _o:right()
     self.object[self.property_name] = self.object[self.property_name] - 1
-    if self.object[self.property_name] > #self.table then
+    if self.object[self.property_name] < 1 then
+      self.object[self.property_name] = #self.table
+    end
+  end
+
+  function _o:reset()
+    self.object[self.property_name] = self.default_value
+  end
+
+  function _o:legend()
+    return "MP: Reset to default"
+  end
+
+  return _o
+end
+
+--- This creates a sub scrollable menu entry, used for scrolling through a list of values.<br>
+--- 
+--- @param _object table: The table that stores the properties, eg: 'trial_settings'
+--- @param _property_name string: The property that stores the current selected item, eg: 'trial_selected'
+--- @param _sub_property_name string: The property that stores the index of the sublist, eg: 'character_selected'
+--- @param _table table: The table that contains the sublist of items to display, eg: trial_details
+--- @param _sub_property_value_name string: The name of the sub property to display
+--- @param _displayed_items integer: The number of items to display in the menu, must be odd, eg: 5
+--- @param _default_value? integer: The default value to display if the property is nil, eg: 1
+function sub_scrollable_trial_menu(_object, _property_name, _sub_property_name, _table, _sub_property_value_name, _displayed_items, _default_value)
+  if _default_value == nil then _default_value = 1 end
+  if (_displayed_items % 2 == 0) then
+    error("scrollable_trial_menu requires an odd number of displayed items, got ".._displayed_items)
+  end
+  local _o = {}
+  _o.object = _object
+  _o.property_name = _property_name
+  _o.sub_property_name = _sub_property_name
+  _o.sub_property_value_name = _sub_property_value_name
+  _o.table = _table
+  _o.displayed_items = _displayed_items
+  _o.default_value = _default_value
+  _o.y_padding = (_displayed_items -1) * menu_y_interval
+
+
+  function _o:draw(_x,_y, _selected)
+    local _c = text_default_color
+    if _selected then
+      _c = text_selected_color
+    end
+
+    local _current_index = self.object[self.property_name]
+    local _middle_index = (self.displayed_items +1) / 2
+    local circular_list = toDoublyCircularList(self.table[self.object[self.sub_property_name]])
+
+    _y = _y - menu_y_interval
+
+    for i = 1, self.displayed_items do
+      _node = getNodeAt(circular_list, _current_index - (i - _middle_index))
+      _y = _y + menu_y_interval
+      
+      if i == _middle_index then
+        gui.text(_x, _y, "<".._node.value[self.sub_property_value_name]..">", _c, text_default_border_color)
+
+      else
+        gui.text(_x, _y, _node.value[self.sub_property_value_name], text_default_color, text_default_border_color)
+      end
+    end
+  end
+
+  function _o:left()
+    self.object[self.property_name] = self.object[self.property_name] + 1
+    if self.object[self.property_name] > #self.table[self.object[self.sub_property_name]] then
       self.object[self.property_name] = 1
+    end
+  end
+
+  function _o:right()
+    self.object[self.property_name] = self.object[self.property_name] - 1
+    if self.object[self.property_name] < 1 then
+      self.object[self.property_name] = #self.table[self.object[self.sub_property_name]]
     end
   end
 
@@ -935,7 +1013,11 @@ function multitab_menu_update(_menu, _input)
         _menu.is_main_menu_selected = false
         _menu.sub_menu_selected_index = 1
       else
-        _menu.sub_menu_selected_index = _menu.sub_menu_selected_index + 1
+        if _menu.content[_menu.main_menu_selected_index].entries[_menu.sub_menu_selected_index + 1] and _menu.content[_menu.main_menu_selected_index].entries[_menu.sub_menu_selected_index + 1] ["empty_item"] then
+          _menu.sub_menu_selected_index = _menu.sub_menu_selected_index + 2
+        else
+          _menu.sub_menu_selected_index = _menu.sub_menu_selected_index + 1
+        end
         if _menu.sub_menu_selected_index > #_menu.content[_menu.main_menu_selected_index].entries then
           _menu.is_main_menu_selected = true
         end
@@ -953,8 +1035,12 @@ function multitab_menu_update(_menu, _input)
         _menu.is_main_menu_selected = false
         _menu.sub_menu_selected_index = #_menu.content[_menu.main_menu_selected_index].entries
       else
-        _menu.sub_menu_selected_index = _menu.sub_menu_selected_index - 1
-        if _menu.sub_menu_selected_index == 0 then
+        if _menu.content[_menu.main_menu_selected_index].entries[_menu.sub_menu_selected_index - 1] and _menu.content[_menu.main_menu_selected_index].entries[_menu.sub_menu_selected_index - 1] ["empty_item"] then
+          _menu.sub_menu_selected_index = _menu.sub_menu_selected_index - 2
+        else
+          _menu.sub_menu_selected_index = _menu.sub_menu_selected_index - 1
+        end
+        if _menu.sub_menu_selected_index <= 0 then
           _menu.is_main_menu_selected = true
         end
       end
@@ -1064,9 +1150,13 @@ function multitab_menu_draw(_menu)
   local _menu_y = _menu.top + 23
   local _draw_index = 0
   local _is_focused = _menu == menu_stack_top()
+  local _y_padding = 0
   for i = 1, #_menu.content[_menu.main_menu_selected_index].entries do
     if _menu.content[_menu.main_menu_selected_index].entries[i].is_disabled == nil or not _menu.content[_menu.main_menu_selected_index].entries[i].is_disabled() then
-      _menu.content[_menu.main_menu_selected_index].entries[i]:draw(_menu_x, _menu_y + menu_y_interval * _draw_index, not _menu.is_main_menu_selected and _is_focused and _menu.sub_menu_selected_index == i)
+      if i > 1 and _menu.content[_menu.main_menu_selected_index].entries[i-1]["y_padding"] then
+        _y_padding = _y_padding + _menu.content[_menu.main_menu_selected_index].entries[i-1]["y_padding"]
+      end
+      _menu.content[_menu.main_menu_selected_index].entries[i]:draw(_menu_x, _menu_y + _y_padding + menu_y_interval * _draw_index, not _menu.is_main_menu_selected and _is_focused and _menu.sub_menu_selected_index == i)
       _draw_index = _draw_index + 1
     end
   end
@@ -1122,10 +1212,14 @@ function menu_update(_menu, _input)
       _menu.content[_menu.selected_index]:up()
     else
       repeat
-      _menu.selected_index = _menu.selected_index - 1
-      if _menu.selected_index == 0 then
-        _menu.selected_index = #_menu.content
-      end
+        if _menu.content[_menu.selected_index - 1] and _menu.content[_menu.selected_index - 1]["empty_item"] then
+          _menu.selected_index = _menu.selected_index - 2
+        else
+          _menu.selected_index = _menu.selected_index - 1
+        end
+        if _menu.selected_index <= 0 then
+          _menu.selected_index = #_menu.content
+        end
       until _menu.content[_menu.selected_index].is_disabled == nil or not _menu.content[_menu.selected_index].is_disabled()
     end
   end
@@ -1135,8 +1229,12 @@ function menu_update(_menu, _input)
       _menu.content[_menu.selected_index]:down()
     else
       repeat
-        _menu.selected_index = _menu.selected_index + 1
-        if _menu.selected_index == #_menu.content + 1 then
+        if _menu.content[_menu.selected_index +1 ] and _menu.content[_menu.selected_index + 1]["empty_item"] then
+          _menu.selected_index = _menu.selected_index + 2
+        else
+          _menu.selected_index = _menu.selected_index + 1
+        end
+        if _menu.selected_index >= #_menu.content + 1 then
           _menu.selected_index = 1
         end
       until _menu.content[_menu.selected_index].is_disabled == nil or not _menu.content[_menu.selected_index].is_disabled()
