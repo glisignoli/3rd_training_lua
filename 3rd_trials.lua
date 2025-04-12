@@ -40,6 +40,8 @@ require("src/menu_widgets")
 ---       version = 1,
 ---       p1_sequence = {1, 2, 3},
 ---       hits = {1, 2, 3},
+---       path_to_trial = "data/sfiii3nr1/trials/base/Ryu/Trial1"
+---       completed_count = 0
 ---     },
 ---     [2] = {
 ---       trial_name = "Trial 2",
@@ -48,6 +50,8 @@ require("src/menu_widgets")
 ---       version = 1,
 ---       p1_sequence = {1, 2, 3},
 ---       hits = {1, 2, 3},
+---       path_to_trial = "data/sfiii3nr1/trials/base/Ryu/Trial2"
+---       completed_count = 0
 ---     },
 ---     [3] = {...}
 ---   },
@@ -59,6 +63,8 @@ require("src/menu_widgets")
 ---       version = 1,
 ---       p1_sequence = {1, 2, 3},
 ---       hits = {1, 2, 3},
+---       path_to_trial = "data/sfiii3nr1/trials/base/Ken/Trial1"
+---       completed_count = 0
 ---     },
 ---     [2] = {...}
 ---   },
@@ -79,21 +85,42 @@ function load_trials_list(load_trial_details)
 
       if _load_trial_details then
         -- Check to see if there is a data.json file
-        local _char_trial_data_json = {}
-        local f=io.open(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path), "r")
-        if file_exists(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)) then
-          local _trial_data = read_object_from_json_file(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path))
+        -- local _char_trial_data_json = {}
+        -- local f=io.open(string.format("%s/%s/%s/data.json", _base_path, _char_str, _path), "r")
+        local _trial_path = string.format("%s/%s/%s", _base_path, _char_str, _path)
+        if file_exists(_trial_path.."/data.json") then
+          local _trial_data = read_object_from_json_file(_trial_path.."/data.json")
+          _trial_data['trial_path'] = _trial_path -- Add the path to the trial data so we know where to write completed_count updates
           
+          -- Load the comppleted status file
+          if file_exists(_trial_path.."/completed.json") then
+            local _completed_data = read_object_from_json_file(_trial_path.."/completed.json")
+            if _completed_data ~= nil then
+              _trial_data['completed_count'] = _completed_data.completed_count
+            else
+              -- Create file with completed count = 0
+              local _completed_data = {["completed_count"] = 0}
+              write_object_to_json_file(_completed_data, _trial_path.."/completed.json")
+              _trial_data['completed_count'] = 0
+            end
+          else
+            -- Create file with completed count = 0
+            local _completed_data = {["completed_count"] = 0}
+            write_object_to_json_file(_completed_data, _trial_path.."/completed.json")
+            _trial_data['completed_count'] = 0
+          end
+
+
           -- Check that data.json is valid
           if validate_trial_data(_trial_data) then
             -- Since the trial data is valid, we can add it to _trial_details
             table.insert(_all_char_trials, _trial_data)
           else
-            print(string.format("Failed to load trial data \"%s/%s/%s\"",_base_path, _char_str, _path))
+            print("Failed to load trial data ".._trial_path)
           end
 
         else
-          print(string.format("Can't open trial: missing data.json: \"%s\"", string.format("%s/%s/%s/data.json", _base_path, _char_str, _path)))
+          print("Can't open trial: missing data.json: ".. _trial_path)
         end
       end
       
@@ -114,6 +141,8 @@ function load_trials_list(load_trial_details)
           print(string.format("  trial_description: "..trial.trial_description))
           print(string.format("  trial_char: "..trial.char))
           print(string.format("  trial_version: %s", trial.version))
+          print(string.format("  trial_path: %s", trial.trial_path))
+          print(string.format("  trial_completed_count: %s", trial.completed_count))
           -- Table print(string.format("  %s", trial.p1_sequence))
           -- Table print(string.format("  %s", trial.hits))
         end
@@ -547,6 +576,7 @@ main_menu = make_multitab_menu(
         -- sub_list_menu_item("Trial", trial_settings, "character_trial_selected", trial_details, "character_selected", "trial_name"),
         button_menu_item("Load Trial", load_trial),
         button_menu_item("Play Demo", play_demo),
+        empty_menu_item(),
         sub_text_menu_item("Description", trial_settings, "character_selected", "character_trial_selected", trial_details, "trial_description"),
       }
     }
