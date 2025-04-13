@@ -321,8 +321,10 @@ function checkbox_menu_item(_name, _object, _property_name, _default_value)
   return _o
 end
 
-function list_menu_item(_name, _object, _property_name, _list, _default_value, _sub_list_property_to_reset)
+function list_menu_item(_name, _object, _property_name, _list, _default_value, _sub_list_property_to_reset, _calculate_percentage_for_trials_details_table)
   if _default_value == nil then _default_value = 1 end
+  if _sub_list_property_to_reset == nil then _sub_list_property_to_reset = false end
+  if _calculate_percentage_for_trials_details_table == nil then _calculate_percentage_for_trials_details_table = false end
   local _o = {}
   _o.name = _name
   _o.object = _object
@@ -330,17 +332,33 @@ function list_menu_item(_name, _object, _property_name, _list, _default_value, _
   _o.list = _list
   _o.default_value = _default_value
   _o.sub_list_property_to_reset = _sub_list_property_to_reset
+  _o.calculate_percentage_for_trials_details_table = _calculate_percentage_for_trials_details_table
 
   function _o:draw(_x, _y, _selected)
     local _c = text_default_color
     local _prefix = ""
     local _suffix = ""
+    local _percentage = ""
     if _selected then
       _c = text_selected_color
       _prefix = "< "
       _suffix = " >"
     end
-    gui.text(_x, _y, _prefix..self.name.." : "..tostring(self.list[self.object[self.property_name]]).._suffix, _c, text_default_border_color)
+
+    -- Caculate the number of trials completed
+    if self.calculate_percentage_for_trials_details_table then
+      -- Get all the trials for the current selected character, then count the number of completed trials
+      _total_trials = #self.calculate_percentage_for_trials_details_table[self.object[self.property_name]]
+      _total_trials_completed = 0
+      for i in ipairs(self.calculate_percentage_for_trials_details_table[self.object[self.property_name]]) do
+        if self.calculate_percentage_for_trials_details_table[self.object[self.property_name]][i]['completed_count'] > 0 then
+          _total_trials_completed = _total_trials_completed + 1
+        end
+      end
+
+      _percentage = " - "..string.format("%.2f", (_total_trials_completed/_total_trials)*100).."%"
+    end
+    gui.text(_x, _y, _prefix..self.name.." : "..self.list[self.object[self.property_name]].._percentage.._suffix, _c, text_default_border_color)
   end
 
   function _o:left()

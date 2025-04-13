@@ -569,11 +569,10 @@ main_menu = make_multitab_menu(
     {
       name = "Trials",
       entries = {
-        list_menu_item("Character", trial_settings, "character_selected", characters, 1, "character_trial_selected"),
+        list_menu_item("Character", trial_settings, "character_selected", characters, 1, "character_trial_selected", trial_details),
         empty_menu_item(),
         sub_scrollable_trial_menu(trial_settings, "character_trial_selected", "character_selected", trial_details, "trial_name", 5),
         empty_menu_item(),
-        -- sub_list_menu_item("Trial", trial_settings, "character_trial_selected", trial_details, "character_selected", "trial_name"),
         button_menu_item("Load Trial", load_trial),
         button_menu_item("Play Demo", play_demo),
         empty_menu_item(),
