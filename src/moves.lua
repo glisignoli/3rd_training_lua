@@ -1,5 +1,8 @@
 move_data_root_path = string.format("data/%s/moves", rom_name)
 
+--- Load all character moves from JSONS files and returns a table
+--- 
+--- @return table # { ["char1"] = { ["list"] = {}, ["lookup"] = {} }, ["char2"] = { ["list"] = {}, ["lookup"] = {} } }
 function load_move_data()
   local _moves = {}
   for _i, _char_str in ipairs(characters) do

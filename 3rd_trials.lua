@@ -17,6 +17,7 @@ print("- Reset the current trial by pressing coin")
 
 assert_enabled = true
 developer_mode = true
+_trial_complete_updated = false -- True if the trial the completed status for the character has been updates
 
 require("src/tools")
 require("src/memory_adresses")
@@ -178,23 +179,23 @@ function file_exists(file_path)
   if f~=nil then io.close(f) return true else return false end
 end
 
-function load_trial_definition(_path)
-  local _savestate_path = string.format("%s/savestate.fs", _path)
+function load_trial_definition(_trial_definition_details)
+  local _savestate_path = string.format("%s/savestate.fs", _trial_definition_details.trial_path)
   if not do_file_exists(_savestate_path) then
     print(string.format("Can't open trial: missing savestate \"%s\"", _savestate_path))
   end
 
-  local _data_path = string.format("%s/data.json", _path)
-  if not do_file_exists(_data_path) then
-    print(string.format("Can't open trial: missing savestate \"%s\"", _data_path))
-  end
+  -- local _data_path = string.format("%s/data.json", _trial_definition_details.path_to_trial)
+  -- if not do_file_exists(_data_path) then
+  --   print(string.format("Can't open trial: missing savestate \"%s\"", _data_path))
+  -- end
 
   local _trial_definition = {}
-  _trial_definition.data = read_object_from_json_file(_data_path)
+  _trial_definition.data = _trial_definition_details
   _trial_definition.savestate = savestate.create(_savestate_path)
 
   if developer_mode then
-    print(string.format("Loaded trial \"%s\"", _path))
+    print(string.format("Loaded trial \"%s\"", _trial_definition_details.trial_path))
   end
 
   return _trial_definition
@@ -230,11 +231,15 @@ function update_trial_watch(_trial_watch, _attacker, _defender)
       init_trial_watch(_trial_watch)
       _trial_watch.is_started = true
     end
+    -- Inset the hit detected into the trial_watch, it's any hit, not the required one
     table.insert(_trial_watch.hits, _attacker.animation)
   end
 end
 
--- STEPS
+--- Build trial steps from character moves and hits
+--- 
+--- @param _char_moves table: Character moves, table
+--- @param _hits table: from the trial
 function build_trial_steps(_char_moves, _hits)
   local _trial_steps = {
     steps = {},
@@ -265,6 +270,12 @@ function build_trial_steps(_char_moves, _hits)
   return _trial_steps
 end
 
+--- Draw and update trial steps on screen
+--- 
+--- @param _x number: X position to draw the steps
+--- @param _y number: Y position to draw the steps
+--- @param _trial_steps table: Trial steps, table
+--- @param _progress number: Progress of the trial, 0 to #_trial_steps.hit_to_step
 function draw_trial_steps(_x, _y, _trial_steps, _progress)
   _progress = _progress or 0
   local _previous_step = 0
@@ -366,12 +377,14 @@ end
 moves = load_move_data()
 
 trials_list, trial_details= load_trials_list(true)
+current_character = 1
 current_trial = 1
 
 trial_recording = init_trial_recording()
 is_playing_demo = false
 
 staged_trial = nil
+
 function stage_trial(_trial_definition)
   staged_trial = {}
   staged_trial.definition = _trial_definition
@@ -383,7 +396,7 @@ function stage_trial(_trial_definition)
 end
 
 function on_start()
-  local _trial_definition = load_trial_definition(trials_list[1])
+  local _trial_definition = load_trial_definition(trial_details[current_character][current_trial])
   stage_trial(_trial_definition)
 end
 
@@ -515,6 +528,7 @@ function before_frame()
     record_frame_input(player_objects[1], _input, trial_recording.sequence.sequence)
     trial_recording.steps = build_trial_steps(moves[player_objects[1].char_str], trial_recording.watch.hits)
   else
+    -- Check if hit's processed
     update_trial_watch(staged_trial.watch, player_objects[1], player_objects[2])
   end
 
@@ -548,8 +562,8 @@ function play_demo()
 end
 
 function load_trial()
-  local _path_to_trial = "data/sfiii3nr1/trials/base/" .. characters[trial_settings.character_selected] .. "/" .. trial_details[trial_settings.character_selected][trial_settings.character_trial_selected].trial_name
-  local _trial_definition = load_trial_definition(_path_to_trial)
+  -- local _path_to_trial = "data/sfiii3nr1/trials/base/" .. characters[trial_settings.character_selected] .. "/" .. trial_details[trial_settings.character_selected][trial_settings.character_trial_selected].trial_name
+  local _trial_definition = load_trial_definition(trial_details[trial_settings.character_selected][trial_settings.character_trial_selected])
   stage_trial(_trial_definition)
 end
 
@@ -588,6 +602,21 @@ main_menu = make_multitab_menu(
   end
 )
 
+--- Increment the completed count for the trial in the completed.json file and in memory
+--- @param _staged_trial table: Staged trial
+function increment_completed_count(_staged_trial)
+  local _completed_data = read_object_from_json_file(_staged_trial.definition.data.trial_path.."/completed.json")
+  if _completed_data ~= nil then
+    _completed_data.completed_count = _completed_data.completed_count + 1
+    --- Update the completed count in the file
+    write_object_to_json_file(_completed_data, _staged_trial.definition.data.trial_path.."/completed.json")
+    --- Update the completed count in the trial data so we can see it in the menu
+    _staged_trial.definition.data.completed_count = _completed_data.completed_count
+  else
+    print(string.format("Failed to load completed count from \"%s\"", _staged_trial.definition.data.trial_path.."/completed.json"))
+  end
+end
+
 function on_gui()
   local _max_hit = 0
   if not trial_recording.on then
@@ -612,6 +641,15 @@ function on_gui()
   if _steps ~= nil then
     -- If menu is open, then hide steps
     if not is_menu_open then
+      --- Trial completed! Update completed count, and mark the trial as _completed (so it doesn't keep writing to the file)
+      if _max_hit == #_steps.hit_to_step then
+        if not _trial_complete_updated and not trial_recording.on and not is_playing_demo then
+          _trial_complete_updated = true
+          increment_completed_count(staged_trial)
+        end
+      else
+        _trial_complete_updated = false
+      end
       draw_trial_steps(_x, _y, _steps, _max_hit)
     end
   end

@@ -704,7 +704,7 @@ function scrollable_trial_menu(_object, _property_name, _table, _displayed_items
 end
 
 --- This creates a sub scrollable menu entry, used for scrolling through a list of values.<br>
---- TODO: Currently hardcoded to look for comppleted status. Need to template the string to display
+--- TODO: Currently hardcoded to look for completed status. Need to template the string to display
 --- 
 --- @param _object table: The table that stores the properties, eg: 'trial_settings'
 --- @param _property_name string: The property that stores the current selected item, eg: 'trial_selected'
@@ -743,7 +743,9 @@ function sub_scrollable_trial_menu(_object, _property_name, _sub_property_name, 
 
     for i = 1, self.displayed_items do
       _node = getNodeAt(circular_list, _current_index - (i - _middle_index))
-      if _node.value['completed_count'] > 0 then
+      if _node.value['completed_count'] > 5 then
+        _completed_mark = "S"
+      elseif _node.value['completed_count'] > 0 then
         _completed_mark = "X"
       else
         _completed_mark = " "
