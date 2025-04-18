@@ -743,7 +743,7 @@ function sub_scrollable_trial_menu(_object, _property_name, _sub_property_name, 
 
     for i = 1, self.displayed_items do
       _node = getNodeAt(circular_list, _current_index - (i - _middle_index))
-      if _node.value['completed_count'] > 5 then
+      if _node.value['completed_count'] > 4 then
         _completed_mark = "S"
       elseif _node.value['completed_count'] > 0 then
         _completed_mark = "X"
