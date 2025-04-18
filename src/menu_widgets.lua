@@ -321,6 +321,7 @@ function checkbox_menu_item(_name, _object, _property_name, _default_value)
   return _o
 end
 
+--- TODO There's a hardcoded way of calculuting the percentage of trials completed. Need to fix this with templating
 function list_menu_item(_name, _object, _property_name, _list, _default_value, _sub_list_property_to_reset, _calculate_percentage_for_trials_details_table)
   if _default_value == nil then _default_value = 1 end
   if _sub_list_property_to_reset == nil then _sub_list_property_to_reset = false end
