@@ -19,6 +19,16 @@ assert_enabled = true
 developer_mode = true
 _trial_complete_updated = false -- True if the trial the completed status for the character has been updates
 
+
+is_playing_demo = false
+staged_trial = nil
+trial_settings = {
+  character_selected = 1, --First character is default
+  character_trial_selected = 1, --First trial is default
+  replay_pause_enabled = false,
+  replay_random_hold_time_remaining = 0,
+}
+
 require("src/tools")
 require("src/memory_adresses")
 require("src/framedata")
@@ -373,50 +383,7 @@ function save_trial_definition(_trial_definition, _path)
   print(string.format("Saved trial to \"%s\"", _trial_path))
 end
 
--- EMU
-moves = load_move_data()
 
-trials_list, trial_details= load_trials_list(true) --- trial_list no longer used, but keeping it for now
-
-trial_recording = init_trial_recording()
-is_playing_demo = false
-
-staged_trial = nil
-
-trial_settings = {
-  character_selected = 1, --First character is default
-  character_trial_selected = 1, --First trial is default
-  replay_pause_enabled = false,
-  replay_random_hold_time_remaining = 0,
-}
-
-
--- Main Menu
-main_menu = make_multitab_menu(
---23, 15, 360, 195, -- screen size 383,223
-  23, 5, 360, 205,  -- screen size 383,223
-  {
-    {
-      name = "Trials",
-      entries = {
-        list_menu_item("Character", trial_settings, "character_selected", characters, 1, "character_trial_selected", trial_details),
-        empty_menu_item(),
-        sub_scrollable_trial_menu(trial_settings, "character_trial_selected", "character_selected", trial_details, "trial_name", 5),
-        empty_menu_item(),
-        button_menu_item("Load Trial", on_start),
-        button_menu_item("Play Demo", play_demo),
-        empty_menu_item(),
-        sub_text_menu_item("Description", trial_settings, "character_selected", "character_trial_selected", trial_details, "trial_description"),
-      }
-    }
-  },
-  function()
-    -- Empty function on menu exit
-  end,
-  function(_menu)
-    -- Empty function for additional draw
-  end
-)
 
 function stage_trial(_trial_definition)
   staged_trial = {}
@@ -643,7 +610,10 @@ function on_gui()
     -- If menu is open, then hide steps
     if not is_menu_open then
       --- Trial completed! Update completed count, and mark the trial as _completed (so it doesn't keep writing to the file)
+      print("Max hit: " .. _max_hit)
+      print("Hit to step: " .. #_steps.hit_to_step)
       if _max_hit == #_steps.hit_to_step then
+        --- TODO This only works if ALL hits in the move connect. See trial alex-236HP-4HP-SA2-ohthemisery
         if not _trial_complete_updated and not trial_recording.on and not is_playing_demo then
           _trial_complete_updated = true
           increment_completed_count(staged_trial)
@@ -673,6 +643,38 @@ function on_gui()
   hotkey4_pressed = false
   hotkey5_pressed = false
 end
+
+-- EMU
+moves = load_move_data()
+trials_list, trial_details= load_trials_list(true) --- trial_list no longer used, but keeping it for now
+trial_recording = init_trial_recording()
+
+-- Main Menu
+main_menu = make_multitab_menu(
+--23, 15, 360, 195, -- screen size 383,223
+  23, 5, 360, 205,  -- screen size 383,223
+  {
+    {
+      name = "Trials",
+      entries = {
+        list_menu_item("Character", trial_settings, "character_selected", characters, 1, "character_trial_selected", trial_details),
+        empty_menu_item(),
+        sub_scrollable_trial_menu(trial_settings, "character_trial_selected", "character_selected", trial_details, "trial_name", 5),
+        empty_menu_item(),
+        button_menu_item("Load Trial", on_start),
+        button_menu_item("Play Demo", play_demo),
+        empty_menu_item(),
+        sub_text_menu_item("Description", trial_settings, "character_selected", "character_trial_selected", trial_details, "trial_description"),
+      }
+    }
+  },
+  function()
+    -- Empty function on menu exit
+  end,
+  function(_menu)
+    -- Empty function for additional draw
+  end
+)
 
 emu.registerstart(on_start)
 emu.registerbefore(before_frame)
