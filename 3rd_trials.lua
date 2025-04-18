@@ -275,7 +275,14 @@ function build_trial_steps(_char_moves, _hits)
   end
 
   --print(_hits)
-  --print(_trial_steps)
+  print("Trial steps count: "..#_trial_steps.hit_to_step)
+  for _k, _v in pairs(_trial_steps) do
+    if type(_v) == "table" then
+      print(string.format("  %s: %s", _k, table.concat(_v, ", ")))
+    else
+      print(string.format("  %s: %s", _k, _v))
+    end
+  end
 
   return _trial_steps
 end
@@ -614,6 +621,9 @@ function on_gui()
       print("Hit to step: " .. #_steps.hit_to_step)
       if _max_hit == #_steps.hit_to_step then
         --- TODO This only works if ALL hits in the move connect. See trial alex-236HP-4HP-SA2-ohthemisery
+        --- This happens because we are counting the number of hits for the move in the alex_moves.json file,
+        --- and not the number of hits in the trial.
+        --- But the trial, uses all the hits to work out what buttons to display on screen
         if not _trial_complete_updated and not trial_recording.on and not is_playing_demo then
           _trial_complete_updated = true
           increment_completed_count(staged_trial)
