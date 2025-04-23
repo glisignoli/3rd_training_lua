@@ -1,3 +1,8 @@
+-- local json = require ("src/libs/dkjson")
+-- local debuggee = require 'vscode-debuggee'
+-- local startResult, breakerType = debuggee.start(json)
+-- print('debuggee start ->', startResult, breakerType)
+
 require("src/startup")
 
 print("-----------------------------")
@@ -19,9 +24,8 @@ assert_enabled = true
 developer_mode = true
 _trial_complete_updated = false -- True if the trial the completed status for the character has been updates
 
-
 is_playing_demo = false
-staged_trial = nil
+staged_trial = {}
 trial_settings = {
   character_selected = 1, --First character is default
   character_trial_selected = 1, --First trial is default
@@ -189,27 +193,22 @@ function file_exists(file_path)
   if f~=nil then io.close(f) return true else return false end
 end
 
-function load_trial_definition(_trial_definition_details)
-  local _savestate_path = string.format("%s/savestate.fs", _trial_definition_details.trial_path)
-  if not do_file_exists(_savestate_path) then
-    print(string.format("Can't open trial: missing savestate \"%s\"", _savestate_path))
-  end
+-- function load_trial_definition(_trial_definition_details)
+--   local _savestate_path = string.format("%s/savestate.fs", _trial_definition_details.trial_path)
+--   if not do_file_exists(_savestate_path) then
+--     print(string.format("Can't open trial: missing savestate \"%s\"", _savestate_path))
+--   end
 
-  -- local _data_path = string.format("%s/data.json", _trial_definition_details.path_to_trial)
-  -- if not do_file_exists(_data_path) then
-  --   print(string.format("Can't open trial: missing savestate \"%s\"", _data_path))
-  -- end
+--   local _trial_definition = {}
+--   _trial_definition.data = _trial_definition_details
+--   _trial_definition.savestate = savestate.create(_savestate_path)
 
-  local _trial_definition = {}
-  _trial_definition.data = _trial_definition_details
-  _trial_definition.savestate = savestate.create(_savestate_path)
+--   if developer_mode then
+--     print(string.format("Loaded trial \"%s\"", _trial_definition_details.trial_path))
+--   end
 
-  if developer_mode then
-    print(string.format("Loaded trial \"%s\"", _trial_definition_details.trial_path))
-  end
-
-  return _trial_definition
-end
+--   return _trial_definition
+-- end
 
 -- WATCH
 function init_trial_watch(_trial_watch)
@@ -393,10 +392,11 @@ end
 
 
 function stage_trial(_trial_definition)
-  staged_trial = {}
+  -- staged_trial = {}
   staged_trial.definition = _trial_definition
   local _char_moves = moves[staged_trial.definition.data.char]
   staged_trial.steps = build_trial_steps(_char_moves, staged_trial.definition.data.hits)
+
   staged_trial.watch = init_trial_watch()
   savestate.load(staged_trial.definition.savestate)
   is_playing_demo = false
@@ -570,12 +570,23 @@ function play_demo()
 end
 
 function load_trial()
-  -- local _path_to_trial = "data/sfiii3nr1/trials/base/" .. characters[trial_settings.character_selected] .. "/" .. trial_details[trial_settings.character_selected][trial_settings.character_trial_selected].trial_name
-  local _trial_definition = load_trial_definition(trial_details[trial_settings.character_selected][trial_settings.character_trial_selected])
+  local _trial_definition_details = trial_details[trial_settings.character_selected][trial_settings.character_trial_selected]
+  local _savestate_path = string.format("%s/savestate.fs", _trial_definition_details.trial_path)
+  if not do_file_exists(_savestate_path) then
+    print(string.format("Can't open trial: missing savestate \"%s\"", _savestate_path))
+  end
+
+  local _trial_definition = {}
+  _trial_definition.data = _trial_definition_details
+  _trial_definition.savestate = savestate.create(_savestate_path)
+
+  if developer_mode then
+    print(string.format("Loaded trial \"%s\"", _trial_definition_details.trial_path))
+  end
+  
+  -- local _trial_definition = load_trial_definition(trial_details[trial_settings.character_selected][trial_settings.character_trial_selected])
   stage_trial(_trial_definition)
 end
-
-
 
 --- Increment the completed count for the trial in the completed.json file and in memory
 --- @param _staged_trial table: Staged trial
@@ -617,9 +628,14 @@ function on_gui()
     -- If menu is open, then hide steps
     if not is_menu_open then
       --- Trial completed! Update completed count, and mark the trial as _completed (so it doesn't keep writing to the file)
-      print("Max hit: " .. _max_hit)
-      print("Hit to step: " .. #_steps.hit_to_step)
-      if _max_hit == #_steps.hit_to_step then
+      if staged_trial.definition.data.hits_override then
+        trial_hits = #staged_trial.definition.data.hits_override
+      else
+        trial_hits = #staged_trial.definition.data.hits
+      end
+      print("Trial hit detection status: " .. _max_hit .. "/" .. trial_hits)
+
+      if _max_hit == trial_hits then
         --- TODO This only works if ALL hits in the move connect. See trial alex-236HP-4HP-SA2-ohthemisery
         --- This happens because we are counting the number of hits for the move in the alex_moves.json file,
         --- and not the number of hits in the trial.
